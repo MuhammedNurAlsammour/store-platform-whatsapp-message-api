@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DCDNNvzOL5Bcbx6vuRd+Z7Pt8hdEClZZ4uEUSjWsJUo=",
+  "Source": "StorePlatform.API",
+  "BasePath": "_content/StorePlatform.API",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

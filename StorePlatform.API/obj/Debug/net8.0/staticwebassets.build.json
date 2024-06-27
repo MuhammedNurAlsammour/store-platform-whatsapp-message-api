@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "l6eb2WeHiShtA/meI5hCv2VgpZk87saK672sK+Ne5Co=",
+  "Source": "StorePlatform.API",
+  "BasePath": "_content/StorePlatform.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

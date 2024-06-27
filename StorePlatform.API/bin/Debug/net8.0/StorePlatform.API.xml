@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StorePlatform.API</name>
+    </assembly>
+    <members>
+        <member name="M:StorePlatform.API.Controllers.CustomersController.GetAllCustomers(StorePlatform.Application.Features.Queries.Customer.GetAllCustomer.GetAllCustomersQueryRequest)">
+            <summary>
+            Admin Ana Ekran Müşteri Listesi Getirir.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirtilen sayfa ve boyuta göre tüm müşterilerin listesini getirir.
+            </remarks>
+            <param name="request">Tüm müşterileri getirme parametrelerini içeren istek.</param>
+            <returns>Müşteri listesini döndürür.</returns>
+            <response code="200">Müşteri listesini döndürür.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.CustomersController.GetByIdCustomer(StorePlatform.Application.Features.Queries.Customer.GetByIdCustomer.GetByIdCustomerQueryRequest)">
+            <summary>
+            Belirtilen ID'ye göre müşteri bilgilerini getirir.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirli bir müşteri kimliğine göre müşteri bilgilerini getirir.
+            </remarks>
+            <param name="request">Müşteri kimliğini içeren istek.</param>
+            <returns>Müşteri bilgilerini döndürür.</returns>
+            <response code="200">Müşteri bilgilerini döndürür.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+            <response code="404">Müşteri bulunamazsa.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.CustomersController.CreateCustomer(StorePlatform.Application.Features.Commands.Customer.CreateCustomer.CreateCustomerCommandRequest)">
+            <summary>
+            Yeni bir müşteri ekler.
+            </summary>
+            <remarks>
+            Bu uç nokta, yeni bir müşteri ekler.
+            </remarks>
+            <param name="request">Yeni müşteri bilgilerini içeren istek.</param>
+            <returns>İşlem sonucunu döndürür.</returns>
+            <response code="201">Müşteri başarıyla oluşturuldu.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.CustomersController.UpdateCustomer(StorePlatform.Application.Features.Commands.Customer.UpdateCustomer.UpdateCustomerCommandRequest)">
+            <summary>
+            Mevcut bir müşteri kaydını günceller.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirtilen ID'ye sahip müşterinin bilgilerini günceller.
+            </remarks>
+            <param name="request">Güncellenecek müşteri bilgilerini içeren istek.</param>
+            <returns>İşlem sonucunu döndürür.</returns>
+            <response code="200">Müşteri başarıyla güncellendi.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+            <response code="404">Güncellenecek müşteri bulunamazsa.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.CustomersController.DeleteCustomer(StorePlatform.Application.Features.Commands.Customer.DeleteCustomer.DeleteCustomerCommandRequest)">
+            <summary>
+            Belirtilen ID'ye sahip müşteri kaydını siler.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirtilen ID'ye sahip müşteri kaydını siler.
+            </remarks>
+            <param name="request">Silinecek müşteri kimliğini içeren istek.</param>
+            <returns>İşlem sonucunu döndürür.</returns>
+            <response code="200">Müşteri başarıyla silindi.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+            <response code="404">Silinecek müşteri bulunamazsa.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.EmployeesController.GetAllEmployees(StorePlatform.Application.Features.Queries.Employee.GetAllEmployee.GetAllEmployeesQueryRequest)">
+            <summary>
+            Admin Ana Ekran Personel Listesi Getirir.
+            </summary>
+            <remarks>
+            Bu page ve size, tüm personelin listesini getirir.
+            </remarks>
+            <param name="request">Tüm personeli getirme parametrelerini içeren istek.</param>
+            <returns>Personel listesini döndürür.</returns>
+            <response code="200">Personel listesini döndürür.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.EmployeesController.GetByIdEmployee(StorePlatform.Application.Features.Queries.Employee.GetByIdEmployee.GetByIdEmployeeQueryRequest)">
+            <summary>
+            Belirtilen ID'ye sahip personeli getirir.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirli bir personelin bilgilerini getirir.
+            </remarks>
+            <param name="request">Personel kimliğini içeren istek.</param>
+            <returns>Personel bilgilerini döndürür.</returns>
+            <response code="200">Personel bilgilerini döndürür.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+            <response code="404">Personel bulunamazsa.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.EmployeesController.CreateEmployee(StorePlatform.Application.Features.Commands.Employee.CreateEmployee.CreateEmployeeCommandRequest)">
+            <summary>
+            Yeni bir personel oluşturur.
+            </summary>
+            <remarks>
+            Bu uç nokta, yeni bir personel ekler.
+            </remarks>
+            <param name="request">Yeni personel bilgilerini içeren istek.</param>
+            <returns>İşlem sonucunu döndürür.</returns>
+            <response code="201">Personel başarıyla oluşturuldu.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.EmployeesController.UpdateEmployee(StorePlatform.Application.Features.Commands.Employee.UpdateEmployee.UpdateEmployeeCommandRequest)">
+            <summary>
+            Mevcut bir personel kaydını günceller.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirtilen ID'ye sahip personelin bilgilerini günceller.
+            </remarks>
+            <param name="request">Güncellenecek personel bilgilerini içeren istek.</param>
+            <returns>İşlem sonucunu döndürür.</returns>
+            <response code="200">Personel başarıyla güncellendi.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+            <response code="404">Güncellenecek personel bulunamazsa.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.EmployeesController.DeleteEmployee(StorePlatform.Application.Features.Commands.Employee.DeleteEmployee.DeleteEmployeeCommandRequest)">
+            <summary>
+            Belirtilen ID'ye sahip personeli siler.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirtilen ID'ye sahip personel kaydını siler.
+            </remarks>
+            <param name="request">Silinecek personelin kimliğini içeren istek.</param>
+            <returns>İşlem sonucunu döndürür.</returns>
+            <response code="200">Personel başarıyla silindi.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+            <response code="404">Silinecek personel bulunamazsa.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.ExamplesController.GetAllExamples(StorePlatform.Application.Features.Queries.Example.GetAllExamples.GetAllExamplesQueryRequest)">
+            <summary>
+            Tüm örnekleri getirir.
+            </summary>
+            <remarks>
+            Bu uç nokta, tüm örneklerin listesini getirir.
+            </remarks>
+            <param name="request">Tüm örnekleri getirme parametrelerini içeren istek.</param>
+            <returns>Örnekler listesini döndürür.</returns>
+            <response code="200">Örnekler listesini döndürür.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.ExamplesController.GetByIdExample(StorePlatform.Application.Features.Queries.Example.GetByIdExample.GetByIdExampleQueryRequest)">
+            <summary>
+            Belirtilen ID'ye sahip örneği getirir.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirli bir örneğin bilgilerini getirir.
+            </remarks>
+            <param name="request">Örnek kimliğini içeren istek.</param>
+            <returns>Örnek bilgilerini döndürür.</returns>
+            <response code="200">Örnek bilgilerini döndürür.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+            <response code="404">Örnek bulunamazsa.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.ExamplesController.CreateExample(StorePlatform.Application.Features.Commands.Example.CreateExample.CreateExampleCommandRequest)">
+            <summary>
+            Yeni bir örnek oluşturur.
+            </summary>
+            <remarks>
+            Bu uç nokta, yeni bir örnek ekler.
+            </remarks>
+            <param name="request">Yeni örnek bilgilerini içeren istek.</param>
+            <returns>İşlem sonucunu döndürür.</returns>
+            <response code="201">Örnek başarıyla oluşturuldu.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.ExamplesController.UpdateExample(StorePlatform.Application.Features.Commands.Example.UpdateExample.UpdateExampleCommandRequest)">
+            <summary>
+            Mevcut bir örnek kaydını günceller.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirtilen ID'ye sahip örneğin bilgilerini günceller.
+            </remarks>
+            <param name="request">Güncellenecek örnek bilgilerini içeren istek.</param>
+            <returns>İşlem sonucunu döndürür.</returns>
+            <response code="200">Örnek başarıyla güncellendi.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+            <response code="404">Güncellenecek örnek bulunamazsa.</response>
+        </member>
+        <member name="M:StorePlatform.API.Controllers.ExamplesController.DeleteExample(StorePlatform.Application.Features.Commands.Example.DeleteExample.DeleteExampleCommandRequest)">
+            <summary>
+            Belirtilen ID'ye sahip örneği siler.
+            </summary>
+            <remarks>
+            Bu uç nokta, belirtilen ID'ye sahip örnek kaydını siler.
+            </remarks>
+            <param name="request">Silinecek örneğin kimliğini içeren istek.</param>
+            <returns>İşlem sonucunu döndürür.</returns>
+            <response code="200">Örnek başarıyla silindi.</response>
+            <response code="400">İstek geçersizse.</response>
+            <response code="401">Kullanıcı yetkili değilse.</response>
+            <response code="404">Silinecek örnek bulunamazsa.</response>
+        </member>
+    </members>
+</doc>
