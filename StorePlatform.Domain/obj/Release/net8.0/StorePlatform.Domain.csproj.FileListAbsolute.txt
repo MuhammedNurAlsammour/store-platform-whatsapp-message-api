@@ -10,3 +10,16 @@ A:\PROJELER_BEN\Yazilim\StorePlatform\StorePlatform\StorePlatform.Domain\obj\Rel
 A:\PROJELER_BEN\Yazilim\StorePlatform\StorePlatform\StorePlatform.Domain\obj\Release\net8.0\refint\StorePlatform.Domain.dll
 A:\PROJELER_BEN\Yazilim\StorePlatform\StorePlatform\StorePlatform.Domain\obj\Release\net8.0\StorePlatform.Domain.pdb
 A:\PROJELER_BEN\Yazilim\StorePlatform\StorePlatform\StorePlatform.Domain\obj\Release\net8.0\ref\StorePlatform.Domain.dll
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\bin\Release\net8.0\StorePlatform.Domain.deps.json
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\bin\Release\net8.0\StorePlatform.Domain.dll
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\bin\Release\net8.0\StorePlatform.Domain.pdb
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\StorePlatform.Domain.csproj.AssemblyReference.cache
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\StorePlatform.Domain.GeneratedMSBuildEditorConfig.editorconfig
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\StorePlatform.Domain.AssemblyInfoInputs.cache
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\StorePlatform.Domain.AssemblyInfo.cs
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\StorePlatform.Domain.csproj.CoreCompileInputs.cache
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\StorePlatform.Domain.sourcelink.json
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\StorePlatform.Domain.dll
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\refint\StorePlatform.Domain.dll
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\StorePlatform.Domain.pdb
+A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Release\net8.0\ref\StorePlatform.Domain.dll
