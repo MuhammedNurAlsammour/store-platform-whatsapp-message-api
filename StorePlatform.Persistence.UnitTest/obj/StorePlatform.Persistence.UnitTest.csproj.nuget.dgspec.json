@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\PROJELER_BEN\\Yazilim\\StorePlatform\\StorePlatform\\StorePlatform.Persistence.UnitTest\\StorePlatform.Persistence.UnitTest.csproj": {}
+    "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence.UnitTest\\StorePlatform.Persistence.UnitTest.csproj": {}
   },
   "projects": {
-    "A:\\PROJELER_BEN\\Yazilim\\StorePlatform\\StorePlatform\\StorePlatform.Persistence.UnitTest\\StorePlatform.Persistence.UnitTest.csproj": {
+    "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence.UnitTest\\StorePlatform.Persistence.UnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\PROJELER_BEN\\Yazilim\\StorePlatform\\StorePlatform\\StorePlatform.Persistence.UnitTest\\StorePlatform.Persistence.UnitTest.csproj",
+        "projectUniqueName": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence.UnitTest\\StorePlatform.Persistence.UnitTest.csproj",
         "projectName": "StorePlatform.Persistence.UnitTest",
-        "projectPath": "A:\\PROJELER_BEN\\Yazilim\\StorePlatform\\StorePlatform\\StorePlatform.Persistence.UnitTest\\StorePlatform.Persistence.UnitTest.csproj",
+        "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence.UnitTest\\StorePlatform.Persistence.UnitTest.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
-        "outputPath": "A:\\PROJELER_BEN\\Yazilim\\StorePlatform\\StorePlatform\\StorePlatform.Persistence.UnitTest\\obj\\",
+        "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence.UnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

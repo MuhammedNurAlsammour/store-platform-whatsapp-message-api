@@ -7,14 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Enums\**" />
     <Compile Remove="Features\Commands\Customer\DeleteCtomer\**" />
+    <EmbeddedResource Remove="Enums\**" />
     <EmbeddedResource Remove="Features\Commands\Customer\DeleteCtomer\**" />
+    <None Remove="Enums\**" />
     <None Remove="Features\Commands\Customer\DeleteCtomer\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
-    <Folder Include="Enums\" />
+    <Folder Include="Dtos\RequestDtos\" />
+    <Folder Include="Dtos\Response\NewFolder\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
 

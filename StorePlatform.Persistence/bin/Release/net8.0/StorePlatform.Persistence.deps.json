@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "StorePlatform.Persistence/1.0.0": {
         "dependencies": {
+          "EFCore.NamingConventions": "8.0.2",
           "Microsoft.EntityFrameworkCore": "8.0.2",
           "Microsoft.EntityFrameworkCore.Design": "8.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.2",
@@ -17,6 +18,19 @@
         },
         "runtime": {
           "StorePlatform.Persistence.dll": {}
+        }
+      },
+      "EFCore.NamingConventions/8.0.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.2",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/EFCore.NamingConventions.dll": {
+            "assemblyVersion": "8.0.2.0",
+            "fileVersion": "8.0.2.0"
+          }
         }
       },
       "FluentValidation/11.7.1": {
@@ -647,6 +661,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "EFCore.NamingConventions/8.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NZcocOa3XWw6UZ2Ch6DnECjIrzOQt6XBA4ouGAcbNUdbR8CAGaIn5KP5Nna7erVuv+FUylmX5n4tQAGYWri2xg==",
+      "path": "efcore.namingconventions/8.0.2",
+      "hashPath": "efcore.namingconventions.8.0.2.nupkg.sha512"
     },
     "FluentValidation/11.7.1": {
       "type": "package",
