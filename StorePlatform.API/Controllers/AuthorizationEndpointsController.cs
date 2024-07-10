@@ -4,13 +4,14 @@ using Karmed.External.Auth.Library.Enums;
 using Karmed.External.Auth.Library.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using StorePlatform.Application.Operations;
 
 namespace StorePlatform.API.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
 	public class AuthorizationEndpointsController(IAuthorizationEndpointService authorizationEndpointService) : ControllerBase
-	{
+    {
 		[HttpPost("[action]")]
 		[Authorize(AuthenticationSchemes = "Admin")]
 		[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Assign Role Endpoint", Menu = "AuthorizationEndpoints")]

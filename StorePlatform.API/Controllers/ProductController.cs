@@ -10,6 +10,7 @@ using StorePlatform.Application.Features.Commands.Product.CreateProduct;
 using StorePlatform.Application.Features.Commands.Product.UpdateProduct;
 using StorePlatform.Application.Features.Queries.Product.GetAllProducts;
 using StorePlatform.Application.Features.Queries.Product.GetByIdProduct;
+using StorePlatform.Application.Operations;
 
 namespace StorePlatform.API.Controllers
 {
@@ -17,7 +18,7 @@ namespace StorePlatform.API.Controllers
 	[Route("api/[controller]")]
 	[ApiController]
 	[Authorize(AuthenticationSchemes = "Admin")]
-	public class ProductController(IMediator mediator) : ControllerBase
+	public class ProductController(IMediator mediator) : BaseController
 	{
 
 

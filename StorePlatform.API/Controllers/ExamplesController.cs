@@ -15,7 +15,7 @@ namespace StorePlatform.API.Controllers
 	[ApiController]
 	[Authorize(AuthenticationSchemes = "Admin")]
 	public class ExamplesController(IMediator mediator) : ControllerBase
-	{
+    {
 		/// <summary>
 		/// Tüm örnekleri getirir.
 		/// </summary>

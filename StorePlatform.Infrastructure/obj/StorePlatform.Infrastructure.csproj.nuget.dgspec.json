@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj": {}
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj": {}
   },
   "projects": {
-    "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
         "projectName": "StorePlatform.Application",
-        "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
-        "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
-        "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\obj\\",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
+        "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\muham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,14 +25,16 @@
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://nuget.kardelenyazilim.com:5555/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
-                "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj"
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj"
               }
             }
           }
@@ -41,6 +43,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -84,24 +91,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
         "projectName": "StorePlatform.Domain",
-        "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
-        "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
-        "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\obj\\",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
+        "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\muham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -109,6 +116,8 @@
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://nuget.kardelenyazilim.com:5555/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -121,6 +130,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -152,24 +166,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj": {
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj",
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj",
         "projectName": "StorePlatform.Infrastructure",
-        "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
-        "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure\\obj\\",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\muham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muhammed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -177,14 +191,16 @@
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://nuget.kardelenyazilim.com:5555/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
-                "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
               }
             }
           }
@@ -193,6 +209,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -214,7 +235,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

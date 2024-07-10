@@ -8,6 +8,7 @@ using StorePlatform.Application.Features.Commands.Employee.UpdateEmployee;
 using StorePlatform.Application.Features.Commands.Employee.DeleteEmployee;
 using StorePlatform.Application.Features.Queries.Employee.GetAllEmployee;
 using StorePlatform.Application.Features.Queries.Employee.GetByIdEmployee;
+using StorePlatform.Application.Operations;
 
 
 namespace StorePlatform.API.Controllers
@@ -17,7 +18,7 @@ namespace StorePlatform.API.Controllers
 	[ApiController]
 	[Authorize(AuthenticationSchemes = "Admin")]
 	public class EmployeesController(IMediator mediator) : ControllerBase
-	{
+    {
 		/// <summary>
 		/// Admin Ana Ekran Personel Listesi Getirir.
 		/// </summary>

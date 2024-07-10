@@ -4,19 +4,20 @@ namespace StorePlatform.Application.Dtos.Response
 {
 
 
-	public class TransactionResultPack<T>
-	{
-		public T? Result { get; set; }
-		public TransactionResult IslemSonuc { get; set; }
-		public object? RefId { get; set; }
-		//public decimal Id { get; set; }
+    public class TransactionResultPack<T>
+    {
+        public T? Result { get; set; }
+        public TransactionResult OperationResult { get; set; }
+        public object? RefId { get; set; }
+        //public decimal Id { get; set; }
 
-		public bool IslemDurum => IslemSonuc.Sonuc == TransactionResultEnm.Basarili;
+        public bool OperationStatus => OperationResult.Result == TransactionResultEnm.Success;
 
-		public TransactionResultPack()
-		{
-			Result = default;
-			IslemSonuc = new TransactionResult();
-		}
-	}
+        public TransactionResultPack()
+        {
+            Result = default;
+            OperationResult = new TransactionResult();
+        }
+    }
+
 }

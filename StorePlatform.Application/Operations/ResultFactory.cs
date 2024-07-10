@@ -24,104 +24,109 @@ namespace StorePlatform.Application.Operations
 			return new TransactionResultPack<T>
 			{
 				Result = aEntity,
-				IslemSonuc = new TransactionResult
+				OperationResult = new TransactionResult
 				{
-					MesajBaslik = aMessageTitle ?? "İşlem Başarılı",
-					MesajIcerik = aMessageContent,
-					MesajDetay = aMessageDetail,
-					Sonuc = TransactionResultEnm.Basarili
+					MessageTitle = aMessageTitle ?? "İşlem Başarılı",
+					MessageContent = aMessageContent,
+					MessageDetail = aMessageDetail,
+					Result = TransactionResultEnm.Success
 				},
 				RefId = aRefId
 			};
 		}
 
-		#endregion CreateSuccessResult
+        #endregion CreateSuccessResult
 
-		#region CreateErrorResult
+        #region CreateErrorResult
 
-		/// <summary>
-		/// Hatalı bir işlem Resultu paketi oluşturur.
-		/// </summary>
-		/// <typeparam name="T">Sonuç paketi değer tipi</typeparam>
-		/// <param name="aRefId">Referans ID</param>
-		/// <param name="aId">ID</param>
-		/// <param name="aMessageTitle">Mesaj başlık</param>
-		/// <param name="aMessageContent">Mesaj içerik</param>
-		/// <param name="aMessageDetail">Mesaj detay</param>
-		/// <returns>Oluşturulan işlem Resultu paketi</returns>
-		public static TransactionResultPack<T> CreateErrorResult<T>(object aRefId, int? aId, string? aMessageTitle, string aMessageContent, string aMessageDetail)
-		{
-			return new TransactionResultPack<T>
-			{
-				IslemSonuc = new TransactionResult
-				{
-					MesajBaslik = aMessageTitle ?? "Error / Operation Failed",
-					MesajIcerik = aMessageContent,
-					MesajDetay = aMessageDetail,
-					Sonuc = TransactionResultEnm.Hata
-				},
-				RefId = aRefId
-			};
-		}
+        /// <summary>
+        /// Hatalı bir işlem sonucu paketi oluşturur.
+        /// </summary>
+        /// <typeparam name="T">Sonuç paketi değer tipi</typeparam>
+        /// <param name="aRefId">Referans ID</param>
+        /// <param name="aId">ID</param>
+        /// <param name="aMessageTitle">Mesaj başlık</param>
+        /// <param name="aMessageContent">Mesaj içerik</param>
+        /// <param name="aMessageDetail">Mesaj detay</param>
+        /// <returns>Oluşturulan işlem sonucu paketi</returns>
+        public static TransactionResultPack<T> CreateErrorResult<T>(object aRefId, int? aId, string? aMessageTitle, string aMessageContent, string aMessageDetail)
+        {
+            return new TransactionResultPack<T>
+            {
+                OperationResult = new TransactionResult
+                {
+                    MessageTitle = aMessageTitle ?? "Hata / İşlem Başarısız",
+                    MessageContent = aMessageContent,
+                    MessageDetail = aMessageDetail,
+                    Result = TransactionResultEnm.Error
+                },
+                RefId = aRefId
+            };
+        }
 
-		#endregion CreateErrorResult
+        #endregion CreateErrorResult
 
-		#region CreateWarningResult
 
-		/// <summary>
-		/// Uyarı bir işlem Resultu paketi oluşturur.
-		/// </summary>
-		/// <typeparam name="T">Sonuç paketi değer tipi</typeparam>
-		/// <param name="aRefId">Referans ID</param>
-		/// <param name="aId">ID</param>
-		/// <param name="aMessageTitle">Mesaj başlık</param>
-		/// <param name="aMessageContent">Mesaj içerik</param>
-		/// <param name="aMessageDetail">Mesaj detay</param>
-		/// <returns>Oluşturulan işlem Resultu paketi</returns>
-		public static TransactionResultPack<T> CreateWarningResult<T>(object aRefId, int? aId, string? aMessageTitle, string aMessageContent, string aMessageDetail)
-		{
-			return new TransactionResultPack<T>
-			{
-				IslemSonuc = new TransactionResult
-				{
-					MesajBaslik = aMessageTitle ?? "Uyarı!",
-					MesajIcerik = aMessageContent,
-					MesajDetay = aMessageDetail,
-					Sonuc = TransactionResultEnm.Uyari
-				},
-				RefId = aRefId
-			};
-		}
 
-		#endregion CreateWarningResult
+        #region CreateWarningResult
 
-		#region CreateEmptyResult
 
-		/// <summary>
-		/// Boş bir işlem Resultu paketi oluşturur.
-		/// </summary>
-		/// <typeparam name="T">Sonuç paketi değer tipi</typeparam>
-		/// <param name="aRefId">Referans ID</param>
-		/// <param name="aId">ID</param>
-		/// <param name="aMessageTitle">Mesaj başlık</param>
-		/// <param name="aMessageContent">Mesaj içerik</param>
-		/// <param name="aMessageDetail">Mesaj detay</param>
-		/// <returns>Oluşturulan işlem Resultu paketi</returns>
-		public static TransactionResultPack<T> CreateEmptyResult<T>(object aRefId, int? aId, string? aMessageTitle, string aMessageContent, string aMessageDetail)
-		{
-			return new TransactionResultPack<T>
-			{
-				IslemSonuc = new TransactionResult
-				{
-					MesajBaslik = aMessageTitle ?? "Uyarı / Boş Olma Durumu",
-					MesajIcerik = aMessageContent,
-					MesajDetay = aMessageDetail,
-					Sonuc = TransactionResultEnm.Bos
-				},
-				RefId = aRefId
-			};
-		}
+        /// <summary>
+        /// Uyarı içeren bir işlem sonucu paketi oluşturur.
+        /// </summary>
+        /// <typeparam name="T">Sonuç paketi değer tipi</typeparam>
+        /// <param name="aRefId">Referans ID</param>
+        /// <param name="aId">ID</param>
+        /// <param name="aMessageTitle">Mesaj başlık</param>
+        /// <param name="aMessageContent">Mesaj içerik</param>
+        /// <param name="aMessageDetail">Mesaj detay</param>
+        /// <returns>Oluşturulan işlem sonucu paketi</returns>
+        public static TransactionResultPack<T> CreateWarningResult<T>(object aRefId, int? aId, string? aMessageTitle, string aMessageContent, string aMessageDetail)
+        {
+            return new TransactionResultPack<T>
+            {
+                OperationResult = new TransactionResult
+                {
+                    MessageTitle = aMessageTitle ?? "Uyarı!",
+                    MessageContent = aMessageContent,
+                    MessageDetail = aMessageDetail,
+                    Result = TransactionResultEnm.Warning
+                },
+                RefId = aRefId
+            };
+        }
 
-		#endregion CreateEmptyResult
-	}
+
+
+        #endregion CreateWarningResult
+
+        #region CreateEmptyResult
+
+        /// <summary>
+        /// Boş bir işlem sonucu paketi oluşturur.
+        /// </summary>
+        /// <typeparam name="T">Sonuç paketi değer tipi</typeparam>
+        /// <param name="aRefId">Referans ID</param>
+        /// <param name="aId">ID</param>
+        /// <param name="aMessageTitle">Mesaj başlık</param>
+        /// <param name="aMessageContent">Mesaj içerik</param>
+        /// <param name="aMessageDetail">Mesaj detay</param>
+        /// <returns>Oluşturulan işlem sonucu paketi</returns>
+        public static TransactionResultPack<T> CreateEmptyResult<T>(object aRefId, int? aId, string? aMessageTitle, string aMessageContent, string aMessageDetail)
+        {
+            return new TransactionResultPack<T>
+            {
+                OperationResult = new TransactionResult
+                {
+                    MessageTitle = aMessageTitle ?? "Uyarı / Boş Durum",
+                    MessageContent = aMessageContent,
+                    MessageDetail = aMessageDetail,
+                    Result = TransactionResultEnm.Empty
+                },
+                RefId = aRefId
+            };
+        }
+
+        #endregion CreateEmptyResult
+    }
 }

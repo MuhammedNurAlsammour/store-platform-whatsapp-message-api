@@ -6,13 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using StorePlatform.Application.Features.Commands.Customer.CreateCustomer;
 using StorePlatform.Application.Features.Commands.Customer.DeleteCustomer;
 using StorePlatform.Application.Features.Commands.Customer.UpdateCustomer;
-using StorePlatform.Application.Features.Commands.Employee.CreateEmployee;
-using StorePlatform.Application.Features.Commands.Employee.DeleteEmployee;
-using StorePlatform.Application.Features.Commands.Employee.UpdateEmployee;
+
 using StorePlatform.Application.Features.Queries.Customer.GetAllCustomer;
 using StorePlatform.Application.Features.Queries.Customer.GetByIdCustomer;
 using StorePlatform.Application.Features.Queries.Employee.GetAllEmployee;
 using StorePlatform.Application.Features.Queries.Employee.GetByIdEmployee;
+using StorePlatform.Application.Operations;
 
 namespace StorePlatform.API.Controllers
 {
@@ -21,7 +20,7 @@ namespace StorePlatform.API.Controllers
 	[ApiController]
 	[Authorize(AuthenticationSchemes = "Admin")]
 	public class CustomersController(IMediator mediator) : ControllerBase
-	{
+    {
 		/// <summary>
 		/// Admin Ana Ekran Müşteri Listesi Getirir.
 		/// </summary>
