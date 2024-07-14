@@ -1,15 +1,15 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using StorePlatform.Application.Abstractions.Contexts;
-
+using StorePlatform.Application.Dtos.Response;
 using System.Net;
 
 
 namespace StorePlatform.Application.Features.Commands.Customer.UpdateCustomer
 {
-	public class UpdateCustomerCommandHandler(IEmployeeDbContext context) : IRequestHandler<UpdateCustomerCommandRequest, UpdateCustomerCommandResponse>
+	public class UpdateCustomerCommandHandler(IEmployeeDbContext context) : IRequestHandler<UpdateCustomerCommandRequest, TransactionResultPack<UpdateCustomerCommandResponse>>
 	{
-		public async Task<UpdateCustomerCommandResponse> Handle(UpdateCustomerCommandRequest request, CancellationToken cancellationToken)
+		public async Task<TransactionResultPack<UpdateCustomerCommandResponse>> Handle(UpdateCustomerCommandRequest request, CancellationToken cancellationToken)
 		{
 			var customer = await context.Customers
 				.Where(x => x.Id == Guid.Parse(request.Id))

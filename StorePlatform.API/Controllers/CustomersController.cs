@@ -3,15 +3,16 @@ using Karmed.External.Auth.Library.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using StorePlatform.Application.Dtos.Response;
+using StorePlatform.Application.Dtos.ResponseDtos.Customer;
 using StorePlatform.Application.Features.Commands.Customer.CreateCustomer;
 using StorePlatform.Application.Features.Commands.Customer.DeleteCustomer;
 using StorePlatform.Application.Features.Commands.Customer.UpdateCustomer;
-
+using StorePlatform.Application.Features.Commands.Product.UpdateProduct;
 using StorePlatform.Application.Features.Queries.Customer.GetAllCustomer;
 using StorePlatform.Application.Features.Queries.Customer.GetByIdCustomer;
-using StorePlatform.Application.Features.Queries.Employee.GetAllEmployee;
-using StorePlatform.Application.Features.Queries.Employee.GetByIdEmployee;
-using StorePlatform.Application.Operations;
+
+using System.Net;
 
 namespace StorePlatform.API.Controllers
 {
@@ -34,10 +35,10 @@ namespace StorePlatform.API.Controllers
 		/// <response code="401">Kullanıcı yetkili değilse.</response>
 		[HttpGet("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Müşteri Listesi Getirir", Menu = "Müşteri")]
-		public async Task<IActionResult> GetAllCustomers([FromQuery] GetAllCustomersQueryRequest request)
+		public async Task<ActionResult<TransactionResultPack<List<CustomerDTO>>>> GetAllCustomers([FromQuery] GetAllCustomersQueryRequest request)
 		{
 			var response = await mediator.Send(request);
-			return Ok(response);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
 		/// <summary>
@@ -54,10 +55,10 @@ namespace StorePlatform.API.Controllers
 		/// <response code="404">Müşteri bulunamazsa.</response>
 		[HttpGet("[action]/{Id}")]
 		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "ID ye Göre Müşteri Bilgilerini Görüntüle", Menu = "Müşteri")]
-		public async Task<IActionResult> GetByIdCustomer([FromRoute] GetByIdCustomerQueryRequest request)
+		public async Task<ActionResult<TransactionResultPack<List<CustomerDTO>>>> GetByIdCustomer([FromRoute] GetByIdCustomerQueryRequest request)
 		{
 			var response = await mediator.Send(request);
-			return Ok(response);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
 		/// <summary>
@@ -73,11 +74,12 @@ namespace StorePlatform.API.Controllers
 		/// <response code="401">Kullanıcı yetkili değilse.</response>
 		[HttpPost("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Müşteri Eklemek", Menu = "Müşteri")]
-		public async Task<IActionResult> CreateCustomer([FromBody] CreateCustomerCommandRequest request)
+		public async Task<ActionResult<TransactionResultPack<List<CustomerDTO>>>> CreateCustomer([FromBody] CreateCustomerCommandRequest request)
 		{
 			var response = await mediator.Send(request);
-			return StatusCode(response.StatusCode);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
+
 
 		/// <summary>
 		/// Mevcut bir müşteri kaydını günceller.
@@ -93,10 +95,10 @@ namespace StorePlatform.API.Controllers
 		/// <response code="404">Güncellenecek müşteri bulunamazsa.</response>
 		[HttpPut("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Müşteri Güncelemek", Menu = "Müşteri")]
-		public async Task<IActionResult> UpdateCustomer([FromBody] UpdateCustomerCommandRequest request)
+		public async Task<ActionResult<TransactionResultPack<UpdateCustomerCommandResponse>>> UpdateCustomer([FromBody] UpdateCustomerCommandRequest request)
 		{
 			var response = await mediator.Send(request);
-			return StatusCode(response.StatusCode);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
 		/// <summary>
@@ -113,10 +115,10 @@ namespace StorePlatform.API.Controllers
 		/// <response code="404">Silinecek müşteri bulunamazsa.</response>
 		[HttpDelete("[action]/{Id}")]
 		[AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Müşteri Silme", Menu = "Müşteri")]
-		public async Task<IActionResult> DeleteCustomer([FromRoute] DeleteCustomerCommandRequest request)
+		public async Task<ActionResult<TransactionResultPack<UpdateCustomerCommandResponse>>> DeleteCustomer([FromRoute] DeleteCustomerCommandRequest request)
 		{
 			var response = await mediator.Send(request);
-			return StatusCode(response.StatusCode);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
 

@@ -1,10 +1,12 @@
 ﻿using MediatR;
+using StorePlatform.Application.Dtos.Response;
+using StorePlatform.Application.Features.Commands.Customer.DeleteCustomer;
 using E = StorePlatform.Domain.Entities.Customer;
 
 
 namespace StorePlatform.Application.Features.Commands.Customer.UpdateCustomer
 {
-	public class UpdateCustomerCommandRequest : IRequest<UpdateCustomerCommandResponse>
+	public class UpdateCustomerCommandRequest : IRequest<TransactionResultPack<UpdateCustomerCommandResponse>>
 	{
 		public string Id { get; set; }
 		public string? Name { get; set; }
