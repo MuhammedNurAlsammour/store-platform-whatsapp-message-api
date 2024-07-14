@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StorePlatform.Application.Dtos.Response;
 using StorePlatform.Application.Dtos.ResponseDtos.Prodduct;
-using StorePlatform.Application.Features.Commands.Example.UpdateExample;
 using StorePlatform.Application.Features.Commands.Product.CreateProduct;
 using StorePlatform.Application.Features.Commands.Product.UpdateProduct;
+using StorePlatform.Application.Features.Commands.Product.DeleteProduct;
 using StorePlatform.Application.Features.Queries.Product.GetAllProducts;
 using StorePlatform.Application.Features.Queries.Product.GetByIdProduct;
 using StorePlatform.Application.Operations;
@@ -98,8 +98,23 @@ namespace StorePlatform.API.Controllers
 			var response = await mediator.Send(request);
 			return StatusCode((int)HttpStatusCode.OK, response);
 		}
-
-
+		/// <summary>
+		/// Mevcut bir ürünü silen işlev.
+		/// </summary>
+		/// <remarks>
+		/// Bu HTTP DELETE uç noktası, belirtilen ürün kimliği ile mevcut bir ürünü siler.
+		/// </remarks>
+		/// <param name="Id">Silinecek ürün kimliğini içeren istek verisi.</param>
+		/// <response code="200">Başarılı durumda, ürün başarıyla silindi.</response>
+		/// <response code="400">Geçersiz istek durumunda.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		[HttpDelete("[action]/{Id}")]
+		[AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Ürün Silme", Menu = "Ürün")]
+		public async Task<ActionResult<TransactionResultPack<UpdateProductCommandResponse>>> DeleteProduct([FromRoute] DeleteProductCommandRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.OK, response);
+		}
 
 	}
 }
