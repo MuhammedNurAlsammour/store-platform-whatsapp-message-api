@@ -81,7 +81,6 @@ namespace StorePlatform.API.Controllers
 			var response = await mediator.Send(request);
 			return StatusCode((int)HttpStatusCode.Created, response);
 		}
-
 		/// <summary>
 		/// Mevcut bir ürünü güncelleyen işlev.
 		/// </summary>
@@ -97,8 +96,9 @@ namespace StorePlatform.API.Controllers
 		public async Task<ActionResult<TransactionResultPack<UpdateProductCommandResponse>>> UpdateProduct([FromBody] UpdateProductCommandRequest request)
 		{
 			var response = await mediator.Send(request);
-			return StatusCode((int)HttpStatusCode.Created, response);
+			return StatusCode((int)HttpStatusCode.OK, response);
 		}
+
 
 
 	}

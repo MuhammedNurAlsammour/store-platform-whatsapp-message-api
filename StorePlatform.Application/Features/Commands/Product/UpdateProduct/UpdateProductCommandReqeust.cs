@@ -3,9 +3,10 @@ using StorePlatform.Application.Features.Commands.Product.CreateProduct;
 using E = StorePlatform.Domain.Entities.Product;
 using C = StorePlatform.Domain.Entities.ProductCategory;
 using StorePlatform.Domain.Entities;
+using StorePlatform.Application.Dtos.Response;
 namespace StorePlatform.Application.Features.Commands.Product.UpdateProduct
 {
-	public class UpdateProductCommandRequest : IRequest<UpdateProductCommandResponse>
+	public class UpdateProductCommandRequest : IRequest<TransactionResultPack<UpdateProductCommandResponse>>
 	{
 		public Guid ProductId { get; set; }
 		public string Name { get; set; }
