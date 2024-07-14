@@ -61,7 +61,9 @@ namespace StorePlatform.Application.Features.Queries.Product.GetAllProducts
                 return new TransactionResultPack<GetAllProductsQueryResponse>
                 {
                     Result = response,
-                    OperationResult = new TransactionResult
+					RefId = totalCount,
+
+					OperationResult = new TransactionResult
                     {
                         Result = TransactionResultEnm.Success,
                         MessageTitle = "İşlem Başarılı",
@@ -76,7 +78,8 @@ namespace StorePlatform.Application.Features.Queries.Product.GetAllProducts
                 return new TransactionResultPack<GetAllProductsQueryResponse>
                 {
                     Result = null,
-                    OperationResult = new TransactionResult
+					RefId = 0,
+					OperationResult = new TransactionResult
                     {
                         Result = TransactionResultEnm.Error,
                         MessageTitle = "Hata / İşlem Başarısız",

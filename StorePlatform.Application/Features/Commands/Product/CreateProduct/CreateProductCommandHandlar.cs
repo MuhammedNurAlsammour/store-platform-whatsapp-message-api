@@ -1,37 +1,69 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using StorePlatform.Application.Abstractions.Contexts;
+using StorePlatform.Application.Dtos.Response;
+using StorePlatform.Application.Operations;
 using System.Net;
 
 
 namespace StorePlatform.Application.Features.Commands.Product.CreateProduct
 {
-	public class CreateProductCommandHandlar(IEmployeeDbContext context) : IRequestHandler<CreateProductCommandRequest, CreateProductCommandResponse>
+	public class CreateProductCommandHandlar(IEmployeeDbContext context) : IRequestHandler<CreateProductCommandRequest, TransactionResultPack<CreateProductCommandResponse>>
 	{
-		public async Task<CreateProductCommandResponse> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
+		public async Task<TransactionResultPack<CreateProductCommandResponse>> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
 		{
-			var product = CreateProductCommandRequest.Map(request);
+			try
+			{
+				// التحقق من وجود الفئة
+				var categoryExists = await context.categories.AnyAsync(c => c.Id == request.CategoryId, cancellationToken);
+				if (!categoryExists)
+				{
+					return ResultFactory.CreateErrorResult<CreateProductCommandResponse>(
+						request.CategoryId,
+						null,
+						"Hata / İşlem Başarısız",
+						"Belirtilen kategori bulunamadı.",
+						"Category not found."
+					);
+				}
 
-			// Add Product to DbContext
-			context.Products.Add(product);
+				var product = CreateProductCommandRequest.Map(request);
 
-			// Save changes to generate ProductId
-			await context.SaveChangesAsync(cancellationToken);
+				context.Products.Add(product);
+				await context.SaveChangesAsync(cancellationToken);
 
-			// Now we have ProductId generated
-			var productId = product.Id;
+				var productId = product.Id;
+				var categoryId = request.CategoryId;
 
-			// Create ProductCategory entity
-			var productCategory = CreateProductCommandRequest.MapToProductCategory(request, productId);
+				await context.ProductCategories.AddAsync(CreateProductCommandRequest.MapToProductCategory(categoryId, productId));
+				await context.SaveChangesAsync(cancellationToken);
 
-			// Add ProductCategory to DbContext
-			context.ProductCategories.Add(productCategory);
-
-			// Save changes again to save ProductCategory
-			await context.SaveChangesAsync(cancellationToken);
-
-			return new CreateProductCommandResponse { StatusCode = (int)HttpStatusCode.Created };
+				return ResultFactory.CreateSuccessResult<CreateProductCommandResponse>(
+					new CreateProductCommandResponse
+					{
+						StatusCode = (int)HttpStatusCode.Created,
+						CategoryId = categoryId,
+						ProductId = productId
+					},
+					null, // or any appropriate reference id
+					null, // or any appropriate id
+					"İşlem Başarılı",
+					"Kayıt başarıyla eklendi.",
+					$"Product Id: {product.Id}, veri başarıyla eklendi."
+				);
+			}
+			catch (Exception ex)
+			{
+				return ResultFactory.CreateErrorResult<CreateProductCommandResponse>(
+					request.CategoryId,
+					null,
+					"Hata / İşlem Başarısız",
+					"Kayıt eklenirken bir hata oluştu.",
+					ex.Message
+				);
+			}
 		}
+
 	}
 
 

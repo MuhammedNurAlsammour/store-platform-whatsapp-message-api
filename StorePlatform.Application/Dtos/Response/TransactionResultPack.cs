@@ -18,6 +18,7 @@ namespace StorePlatform.Application.Dtos.Response
             Result = default;
             OperationResult = new TransactionResult();
         }
-    }
+		public int StatusCode { get; set; }
+	}
 
 }

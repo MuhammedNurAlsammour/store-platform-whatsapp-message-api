@@ -1,12 +1,13 @@
 ﻿using MediatR;
 using E = StorePlatform.Domain.Entities.Product;
 using C = StorePlatform.Domain.Entities.ProductCategory;
+using StorePlatform.Application.Dtos.Response;
 
 
 
 namespace StorePlatform.Application.Features.Commands.Product.CreateProduct
 {
-	public class CreateProductCommandRequest : IRequest<CreateProductCommandResponse>
+	public class CreateProductCommandRequest : IRequest<TransactionResultPack<CreateProductCommandResponse>>
 	{
 		public string Name { get; set; }
 		public string? Description { get; set; }
@@ -14,7 +15,7 @@ namespace StorePlatform.Application.Features.Commands.Product.CreateProduct
 		public int Stock { get; set; }
 		public Guid EmployeeId { get; set; }
 		public Guid CategoryId { get; set; } // New Property
-		public Guid ProductId { get; set; } // New Property
+		public Guid ProductId { get; set; } 
 
 
 		public static E Map(CreateProductCommandRequest request)
@@ -30,14 +31,12 @@ namespace StorePlatform.Application.Features.Commands.Product.CreateProduct
 			};
 		}
 
-		public static C MapToProductCategory(CreateProductCommandRequest request, Guid productId)
+		public static C MapToProductCategory(Guid CategoryId, Guid productId)
 		{
 			return new()
 			{
-				CategoryId = request.CategoryId,
+				CategoryId = CategoryId,
 				ProductId = productId,
-
-
 
 			};
 		}

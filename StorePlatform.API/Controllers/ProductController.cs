@@ -11,6 +11,7 @@ using StorePlatform.Application.Features.Commands.Product.UpdateProduct;
 using StorePlatform.Application.Features.Queries.Product.GetAllProducts;
 using StorePlatform.Application.Features.Queries.Product.GetByIdProduct;
 using StorePlatform.Application.Operations;
+using System.Net;
 
 namespace StorePlatform.API.Controllers
 {
@@ -70,7 +71,6 @@ namespace StorePlatform.API.Controllers
 		/// Bu HTTP POST uç noktası, gelen istek verisiyle yeni bir ürün ekler.
 		/// </remarks>
 		/// <param name="request">Yeni ürün bilgilerini içeren istek verisi.</param>
-		/// <returns>HTTP durum koduna göre işlem sonucunu döner.</returns>
 		/// <response code="201">Başarılı durumda, yeni ürün başarıyla oluşturuldu.</response>
 		/// <response code="400">Geçersiz istek durumunda.</response>
 		/// <response code="401">Kullanıcı yetkili değilse.</response>
@@ -79,8 +79,27 @@ namespace StorePlatform.API.Controllers
 		public async Task<ActionResult<TransactionResultPack<List<ProductDTO>>>> CreateProduct([FromBody] CreateProductCommandRequest request)
 		{
 			var response = await mediator.Send(request);
-			return StatusCode(response.StatusCode);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
+
+		/// <summary>
+		/// Mevcut bir ürünü güncelleyen işlev.
+		/// </summary>
+		/// <remarks>
+		/// Bu HTTP PUT uç noktası, gelen istek verisiyle mevcut bir ürünü günceller.
+		/// </remarks>
+		/// <param name="request">Güncellenecek ürün bilgilerini içeren istek verisi.</param>
+		/// <response code="200">Başarılı durumda, ürün başarıyla güncellendi.</response>
+		/// <response code="400">Geçersiz istek durumunda.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		[HttpPut("[action]")]
+		[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Ürün Güncelleme", Menu = "Ürün")]
+		public async Task<ActionResult<TransactionResultPack<UpdateProductCommandResponse>>> UpdateProduct([FromBody] UpdateProductCommandRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.Created, response);
+		}
+
 
 	}
 }

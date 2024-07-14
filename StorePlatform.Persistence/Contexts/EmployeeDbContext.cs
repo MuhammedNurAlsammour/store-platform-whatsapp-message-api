@@ -25,7 +25,7 @@ namespace StorePlatform.Persistence.Contexts
 				.ToTable("product_categories");
 
 			modelBuilder.Entity<ProductCategory>()
-				.HasKey(pc => new { pc.ProductId, pc.CategoryId });
+				.HasKey(pc => pc.Id);
 
 			modelBuilder.Entity<ProductCategory>()
 				.HasOne(pc => pc.Product)
@@ -37,8 +37,9 @@ namespace StorePlatform.Persistence.Contexts
 				.WithMany(c => c.ProductCategories)
 				.HasForeignKey(pc => pc.CategoryId);
 		}
-
-
-
 	}
+
+
+
+
 }

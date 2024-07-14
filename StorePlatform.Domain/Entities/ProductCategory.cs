@@ -5,7 +5,7 @@ namespace StorePlatform.Domain.Entities
 {
 	public class ProductCategory : BaseEntity
 	{
-		public Guid Id { get; set; }
+
 		public Guid ProductId { get; set; }
 		public Guid CategoryId { get; set; }
 
