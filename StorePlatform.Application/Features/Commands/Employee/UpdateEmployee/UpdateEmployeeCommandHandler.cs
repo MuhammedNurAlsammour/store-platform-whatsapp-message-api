@@ -3,25 +3,59 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using StorePlatform.Application.Abstractions.Contexts;
-using StorePlatform.Application.Features.Commands.Example.UpdateExample;
+using StorePlatform.Application.Dtos.Response;
+using StorePlatform.Application.Operations;
 using System.Net;
 
 namespace StorePlatform.Application.Features.Commands.Employee.UpdateEmployee
 {
-	public class UpdateEmployeeCommandHandler(IEmployeeDbContext context) : IRequestHandler<UpdateEmployeeCommandRequest, UpdateEmployeeCommandResponse>
+	public class UpdateEmployeeCommandHandler(IEmployeeDbContext context) : IRequestHandler<UpdateEmployeeCommandRequest, TransactionResultPack<UpdateEmployeeCommandResponse>>
 	{
-		public async Task<UpdateEmployeeCommandResponse> Handle(UpdateEmployeeCommandRequest request, CancellationToken cancellationToken)
+		public async Task<TransactionResultPack<UpdateEmployeeCommandResponse>> Handle(UpdateEmployeeCommandRequest request, CancellationToken cancellationToken)
 		{
-			var example = await context.Employees
-				.Where(x => x.Id == Guid.Parse(request.Id))
-				.FirstOrDefaultAsync();
+			try
+			{
+				var employee = await context.Employees
+					.Where(x => x.Id == Guid.Parse(request.Id))
+					.FirstOrDefaultAsync(cancellationToken);
 
-			if (example == null) return new() { StatusCode = (int)HttpStatusCode.NotFound };
+				if (employee == null)
+				{
+					return ResultFactory.CreateErrorResult<UpdateEmployeeCommandResponse>(
+						request.Id,
+						null,
+						"Hata / İşlem Başarısız",
+						"Güncellenecek çalışan bulunamadı.",
+						"Employee not found."
+					);
+				}
 
-			UpdateEmployeeCommandRequest.Map(example, request);
-			await context.SaveChangesAsync(cancellationToken);
+				// Güncellemeleri uygulama
+				UpdateEmployeeCommandRequest.Map(employee, request);
+				await context.SaveChangesAsync(cancellationToken);
 
-			return new() { StatusCode = (int)HttpStatusCode.OK };
+				return ResultFactory.CreateSuccessResult<UpdateEmployeeCommandResponse>(
+					new UpdateEmployeeCommandResponse
+					{
+						StatusCode = (int)HttpStatusCode.OK
+					},
+					null,
+					null,
+					"İşlem Başarılı",
+					"Çalışan başarıyla güncellendi.",
+					$"Çalışan Id: {employee.Id} başarıyla güncellendi."
+				);
+			}
+			catch (Exception ex)
+			{
+				return ResultFactory.CreateErrorResult<UpdateEmployeeCommandResponse>(
+					request.Id,
+					null,
+					"Hata / İşlem Başarısız",
+					"Çalışan güncellenirken bir hata oluştu.",
+					ex.Message
+				);
+			}
 		}
 	}
 

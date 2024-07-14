@@ -9,6 +9,11 @@ using StorePlatform.Application.Features.Commands.Employee.DeleteEmployee;
 using StorePlatform.Application.Features.Queries.Employee.GetAllEmployee;
 using StorePlatform.Application.Features.Queries.Employee.GetByIdEmployee;
 using StorePlatform.Application.Operations;
+using System.Net;
+using StorePlatform.Application.Dtos.Response;
+using StorePlatform.Application.Features.Commands.Customer.UpdateCustomer;
+using StorePlatform.Application.Dtos.ResponseDtos.Customer;
+using StorePlatform.Application.Dtos.ResponseDtos.Employee;
 
 
 namespace StorePlatform.API.Controllers
@@ -32,10 +37,10 @@ namespace StorePlatform.API.Controllers
 		/// <response code="401">Kullanıcı yetkili değilse.</response>
 		[HttpGet("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "GetAllEmployees", Menu = "Employees")]
-		public async Task<IActionResult> GetAllEmployees([FromQuery] GetAllEmployeesQueryRequest request)
+		public async Task<ActionResult<TransactionResultPack<List<EmployeeDTO>>>> GetAllEmployees([FromQuery] GetAllEmployeesQueryRequest request)
 		{
 			var response = await mediator.Send(request);
-			return Ok(response);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
 		/// <summary>
@@ -52,10 +57,10 @@ namespace StorePlatform.API.Controllers
 		/// <response code="404">Personel bulunamazsa.</response>
 		[HttpGet("[action]/{Id}")]      
 		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "GetByIdEmployee", Menu = "Employees")]
-		public async Task<IActionResult> GetByIdEmployee([FromRoute] GetByIdEmployeeQueryRequest request)
+		public async Task<ActionResult<TransactionResultPack<List<EmployeeDTO>>>> GetByIdEmployee([FromRoute] GetByIdEmployeeQueryRequest request)
 		{
 			var response = await mediator.Send(request);
-			return Ok(response);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
 		/// <summary>
@@ -71,10 +76,10 @@ namespace StorePlatform.API.Controllers
 		/// <response code="401">Kullanıcı yetkili değilse.</response>
 		[HttpPost("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "CreateEmployee", Menu = "Employees")]
-		public async Task<IActionResult> CreateEmployee([FromBody] CreateEmployeeCommandRequest request)
+		public async Task<ActionResult<TransactionResultPack<List<EmployeeDTO>>>> CreateEmployee([FromBody] CreateEmployeeCommandRequest request)
 		{
 			var response = await mediator.Send(request);
-			return StatusCode(response.StatusCode);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
 		/// <summary>
@@ -91,10 +96,10 @@ namespace StorePlatform.API.Controllers
 		/// <response code="404">Güncellenecek personel bulunamazsa.</response>
 		[HttpPut("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "UpdateEmployee", Menu = "Employees")]
-		public async Task<IActionResult> UpdateEmployee([FromBody] UpdateEmployeeCommandRequest request)
+		public async Task<ActionResult<TransactionResultPack<UpdateEmployeeCommandResponse>>> UpdateEmployee([FromBody] UpdateEmployeeCommandRequest request)
 		{
 			var response = await mediator.Send(request);
-			return StatusCode(response.StatusCode);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
 		/// <summary>
@@ -111,10 +116,10 @@ namespace StorePlatform.API.Controllers
 		/// <response code="404">Silinecek personel bulunamazsa.</response>
 		[HttpDelete("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "DeleteEmployee", Menu = "Employee")]
-		public async Task<IActionResult> DeleteEmployee([FromQuery] DeleteEmployeeCommandRequest request)
+		public async Task<ActionResult<TransactionResultPack<UpdateEmployeeCommandResponse>>> DeleteEmployee([FromQuery] DeleteEmployeeCommandRequest request)
 		{
 			var response = await mediator.Send(request);
-			return StatusCode(response.StatusCode);
+			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 	}
 }

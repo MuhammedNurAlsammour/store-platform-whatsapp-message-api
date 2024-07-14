@@ -1,10 +1,11 @@
 ﻿
 using MediatR;
+using StorePlatform.Application.Dtos.Response;
 using E = StorePlatform.Domain.Entities.Employee;
 
 namespace StorePlatform.Application.Features.Commands.Employee.UpdateEmployee
 {
-	public class UpdateEmployeeCommandRequest : IRequest<UpdateEmployeeCommandResponse>
+	public class UpdateEmployeeCommandRequest : IRequest<TransactionResultPack<UpdateEmployeeCommandResponse>>
 	{
 		public string Id { get; set; }
 		public string? Name { get; set; }

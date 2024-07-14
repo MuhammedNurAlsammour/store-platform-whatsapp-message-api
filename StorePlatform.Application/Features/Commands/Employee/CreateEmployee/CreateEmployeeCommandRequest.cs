@@ -1,10 +1,10 @@
 ﻿using MediatR;
-
+using StorePlatform.Application.Dtos.Response;
 using E = StorePlatform.Domain.Entities.Employee;
 
 namespace StorePlatform.Application.Features.Commands.Employee.CreateEmployee
 {
-	public class CreateEmployeeCommandRequest : IRequest<CreateEmployeeCommandResponse>
+	public class CreateEmployeeCommandRequest : IRequest<TransactionResultPack<CreateEmployeeCommandResponse>>
 	{
 
 		public string Name { get; set; }
