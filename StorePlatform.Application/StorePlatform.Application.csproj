@@ -19,6 +19,9 @@
     <Folder Include="Dtos\RequestDtos\" />
     <Folder Include="Dtos\Response\NewFolder\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Features\Commands\Categorie\CreateCategorie\" />
+    <Folder Include="Features\Commands\Categorie\DeleteCategorie\" />
+    <Folder Include="Features\Commands\Categorie\UpdateCategorie\" />
   </ItemGroup>
 
   <ItemGroup>
