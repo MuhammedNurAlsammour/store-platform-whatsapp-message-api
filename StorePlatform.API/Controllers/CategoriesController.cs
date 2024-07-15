@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StorePlatform.Application.Dtos.Response;
 using StorePlatform.Application.Dtos.ResponseDtos.Categorie;
+using StorePlatform.Application.Features.Commands.Categorie.CreateCategorie;
 using StorePlatform.Application.Features.Queries.Categorie.GetAllCategories;
 using StorePlatform.Application.Features.Queries.Categorie.GetByIdCategories;
 using System.Net;
@@ -49,6 +50,26 @@ namespace StorePlatform.API.Controllers
 		[HttpGet("[action]/{Id}")]
 		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "ID ile Kategori Getir", Menu = "Kategoriler")]
 		public async Task<ActionResult<TransactionResultPack<CategoriesDTO>>> GetByIdCategories([FromRoute] GetByIdCategoriesQueryRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.Created, response);
+		}
+
+
+		/// <summary>
+		/// Yeni bir Kategori ekler.
+		/// </summary>
+		/// <remarks>
+		/// Bu uç nokta, yeni bir Kategori ekler.
+		/// </remarks>
+		/// <param name="request">Yeni Kategori bilgilerini içeren istek.</param>
+		/// <returns>İşlem sonucunu döndürür.</returns>
+		/// <response code="201">Kategori başarıyla oluşturuldu.</response>
+		/// <response code="400">İstek geçersizse.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		[HttpPost("[action]")]
+		[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Kategori Eklemek", Menu = "Kategoriler")]
+		public async Task<ActionResult<TransactionResultPack<List<CategoriesDTO>>>> CreateCustomer([FromBody] CreateCategorieCommandRequest request)
 		{
 			var response = await mediator.Send(request);
 			return StatusCode((int)HttpStatusCode.Created, response);
