@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using StorePlatform.Application.Dtos.Response;
 using StorePlatform.Application.Dtos.ResponseDtos.Categorie;
 using StorePlatform.Application.Features.Commands.Categorie.CreateCategorie;
+using StorePlatform.Application.Features.Commands.Categorie.UpdateCategorie;
+using StorePlatform.Application.Features.Commands.Customer.UpdateCustomer;
 using StorePlatform.Application.Features.Queries.Categorie.GetAllCategories;
 using StorePlatform.Application.Features.Queries.Categorie.GetByIdCategories;
 using System.Net;
@@ -69,12 +71,32 @@ namespace StorePlatform.API.Controllers
 		/// <response code="401">Kullanıcı yetkili değilse.</response>
 		[HttpPost("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Kategori Eklemek", Menu = "Kategoriler")]
-		public async Task<ActionResult<TransactionResultPack<List<CategoriesDTO>>>> CreateCustomer([FromBody] CreateCategorieCommandRequest request)
+		public async Task<ActionResult<TransactionResultPack<List<CategoriesDTO>>>> CreateCategories([FromBody] CreateCategorieCommandRequest request)
 		{
 			var response = await mediator.Send(request);
 			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
+
+		/// <summary>
+		/// Mevcut bir Kategori kaydını günceller.
+		/// </summary>
+		/// <remarks>
+		/// Bu uç nokta, belirtilen ID'ye sahip müşterinin bilgilerini günceller.
+		/// </remarks>
+		/// <param name="request">Güncellenecek Kategori bilgilerini içeren istek.</param>
+		/// <returns>İşlem sonucunu döndürür.</returns>
+		/// <response code="200">Kategori başarıyla güncellendi.</response>
+		/// <response code="400">İstek geçersizse.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		/// <response code="404">Güncellenecek Kategori bulunamazsa.</response>
+		[HttpPut("[action]")]
+		[AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Kategori Güncelemek", Menu = "Kategori")]
+		public async Task<ActionResult<TransactionResultPack<UpdateCategorieCommandResponse>>> UpdateCategories([FromBody] UpdateCategorieCommandRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.Created, response);
+		}
 
 	}
 }
