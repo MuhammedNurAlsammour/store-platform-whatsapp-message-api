@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {}
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {}
   },
   "projects": {
-    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
         "projectName": "StorePlatform.Application",
-        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
         "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
-        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\obj\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
-                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj"
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj"
               }
             }
           }
@@ -95,14 +95,14 @@
         }
       }
     },
-    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
         "projectName": "StorePlatform.Domain",
-        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
         "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
-        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\obj\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -170,14 +170,14 @@
         }
       }
     },
-    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
         "projectName": "StorePlatform.Persistence",
-        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
         "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
-        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\obj\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -199,8 +199,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
-                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
               }
             }
           }

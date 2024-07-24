@@ -3527,11 +3527,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj",
+      "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj",
       "projectName": "StorePlatform.API",
-      "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj",
+      "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj",
       "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
-      "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\obj\\",
+      "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3553,14 +3553,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
-              "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
+            "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
+              "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
             },
-            "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj": {
-              "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj"
+            "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj": {
+              "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj"
             },
-            "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {
-              "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj"
+            "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {
+              "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj"
             }
           }
         }
