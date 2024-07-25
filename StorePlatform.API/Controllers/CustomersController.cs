@@ -115,7 +115,7 @@ namespace StorePlatform.API.Controllers
 		/// <response code="404">Silinecek müşteri bulunamazsa.</response>
 		[HttpDelete("[action]/{Id}")]
 		[AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Müşteri Silme", Menu = "Müşteri")]
-		public async Task<ActionResult<TransactionResultPack<UpdateCustomerCommandResponse>>> DeleteCustomer([FromRoute] DeleteCustomerCommandRequest request)
+		public async Task<ActionResult<TransactionResultPack<DeleteCustomerCommandResponse>>> DeleteCustomer([FromRoute] DeleteCustomerCommandRequest request)
 		{
 			var response = await mediator.Send(request);
 			return StatusCode((int)HttpStatusCode.Created, response);

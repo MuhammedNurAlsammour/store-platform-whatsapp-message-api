@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using StorePlatform.Application.Dtos.Response;
 using StorePlatform.Application.Dtos.ResponseDtos.Categorie;
 using StorePlatform.Application.Features.Commands.Categorie.CreateCategorie;
+using StorePlatform.Application.Features.Commands.Categorie.DeleteCategorie;
 using StorePlatform.Application.Features.Commands.Categorie.UpdateCategorie;
+using StorePlatform.Application.Features.Commands.Customer.DeleteCustomer;
 using StorePlatform.Application.Features.Commands.Customer.UpdateCustomer;
 using StorePlatform.Application.Features.Queries.Categorie.GetAllCategories;
 using StorePlatform.Application.Features.Queries.Categorie.GetByIdCategories;
@@ -93,6 +95,27 @@ namespace StorePlatform.API.Controllers
 		[HttpPut("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Kategori Güncelemek", Menu = "Kategori")]
 		public async Task<ActionResult<TransactionResultPack<UpdateCategorieCommandResponse>>> UpdateCategories([FromBody] UpdateCategorieCommandRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.Created, response);
+		}
+
+
+		/// <summary>
+		/// Belirtilen ID'ye sahip Kategori kaydını siler.
+		/// </summary>
+		/// <remarks>
+		/// Bu uç nokta, belirtilen ID'ye sahip Kategori kaydını siler.
+		/// </remarks>
+		/// <param name="request">Silinecek Kategori kimliğini içeren istek.</param>
+		/// <returns>İşlem sonucunu döndürür.</returns>
+		/// <response code="200">Kategori başarıyla silindi.</response>
+		/// <response code="400">İstek geçersizse.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		/// <response code="404">Silinecek Kategori bulunamazsa.</response>
+		[HttpDelete("[action]/{Id}")]
+		[AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Kategori Silme", Menu = "Kategori")]
+		public async Task<ActionResult<TransactionResultPack<DeleteCategorieCommandResponse>>> DeleteCategories([FromRoute] DeleteCategorieCommandRequest request)
 		{
 			var response = await mediator.Send(request);
 			return StatusCode((int)HttpStatusCode.Created, response);
