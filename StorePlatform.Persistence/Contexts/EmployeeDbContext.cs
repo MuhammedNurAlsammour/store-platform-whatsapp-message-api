@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StorePlatform.Application.Abstractions.Contexts;
 using StorePlatform.Domain.Entities;
+using StorePlatform.Domain.Maps;
 
 namespace StorePlatform.Persistence.Contexts
 {
@@ -21,21 +22,10 @@ namespace StorePlatform.Persistence.Contexts
 			modelBuilder.HasDefaultSchema("StorePlatform");
 			base.OnModelCreating(modelBuilder);
 
-			modelBuilder.Entity<ProductCategory>()
-				.ToTable("product_categories");
 
-			modelBuilder.Entity<ProductCategory>()
-				.HasKey(pc => pc.Id);
+			modelBuilder.ApplyConfiguration(new ProductCategoryMap());
+			modelBuilder.ApplyConfiguration(new CartMap());
 
-			modelBuilder.Entity<ProductCategory>()
-				.HasOne(pc => pc.Product)
-				.WithMany(p => p.ProductCategories)
-				.HasForeignKey(pc => pc.ProductId);
-
-			modelBuilder.Entity<ProductCategory>()
-				.HasOne(pc => pc.Category)
-				.WithMany(c => c.ProductCategories)
-				.HasForeignKey(pc => pc.CategoryId);
 		}
 	}
 
