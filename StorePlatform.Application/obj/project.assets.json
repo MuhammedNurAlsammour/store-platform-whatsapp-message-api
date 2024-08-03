@@ -1010,11 +1010,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
       "projectName": "StorePlatform.Application",
       "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
       "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
       "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\obj\\",
+=======
+      "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
+      "projectName": "StorePlatform.Application",
+      "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
+      "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
+      "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\obj\\",
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1034,8 +1042,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
               "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj"
+=======
+            "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
+              "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj"
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
             }
           }
         }

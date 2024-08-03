@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
         "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.API\\obj\\",
+=======
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj": {}
+  },
+  "projects": {
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj",
+        "projectName": "StorePlatform.API",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API.csproj",
+        "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\obj\\",
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,6 +45,7 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
                 "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
               },
@@ -39,6 +54,16 @@
               },
               "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {
                 "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj"
+=======
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
+              },
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj"
+              },
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj"
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
               }
             }
           }
@@ -107,6 +132,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -115,6 +141,16 @@
         "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
         "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\obj\\",
+=======
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
+        "projectName": "StorePlatform.Application",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj",
+        "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\obj\\",
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -134,8 +170,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
                 "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj"
+=======
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj"
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
               }
             }
           }
@@ -191,6 +232,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -199,6 +241,16 @@
         "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
         "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Domain\\obj\\",
+=======
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
+        "projectName": "StorePlatform.Domain",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\StorePlatform.Domain.csproj",
+        "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Domain\\obj\\",
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -259,6 +311,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -267,6 +320,16 @@
         "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
         "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure\\obj\\",
+=======
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj",
+        "projectName": "StorePlatform.Infrastructure",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\StorePlatform.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure\\obj\\",
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -286,8 +349,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
                 "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
+=======
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
               }
             }
           }
@@ -321,6 +389,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -329,6 +398,16 @@
         "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
         "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence\\obj\\",
+=======
+    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
+        "projectName": "StorePlatform.Persistence",
+        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
+        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\obj\\",
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -348,8 +427,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
                 "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
+=======
+              "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
+                "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
+>>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
               }
             }
           }
