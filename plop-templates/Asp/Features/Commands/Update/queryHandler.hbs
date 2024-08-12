@@ -1,0 +1,61 @@
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using {{application}}.Application.Abstractions.Contexts;
+using {{application}}.Application.Dtos.Response;
+using {{application}}.Application.Operations;
+using System.Net;
+
+namespace {{application}}.Application.Features.Commands.{{folder}}.{{name}}
+{
+	public class {{name}}CommandHandler(IEmployeeDbContext context) : IRequestHandler<{{name}}CommandRequest, TransactionResultPack<{{name}}CommandResponse>>
+	{
+		public async Task<TransactionResultPack<{{name}}CommandResponse>> Handle({{name}}CommandRequest request, CancellationToken cancellationToken)
+		{
+			try
+			{
+				var {{table}} = await context.{{tableDb}}
+					.Where(x => x.Id == Guid.Parse(request.Id))
+					.FirstOrDefaultAsync(cancellationToken);
+
+				if (employee == null)
+				{
+					return ResultFactory.CreateErrorResult<{{name}}CommandResponse>(
+						request.Id,
+						null,
+						"Hata / İşlem Başarısız",
+						"Güncellenecek çalışan bulunamadı.",
+						"{{table}} not found."
+					);
+				}
+
+				// Güncellemeleri uygulama
+				{{name}}CommandRequest.Map({{table}}, request);
+				await context.SaveChangesAsync(cancellationToken);
+
+				return ResultFactory.CreateSuccessResult<{{name}}CommandResponse>(
+					new {{name}}CommandResponse
+					{
+						StatusCode = (int)HttpStatusCode.OK
+					},
+					null,
+					null,
+					"İşlem Başarılı",
+					"{{table}} başarıyla güncellendi.",
+					$"{{table}} Id: { {{table}}.Id} başarıyla güncellendi."
+				);
+			}
+			catch (Exception ex)
+			{
+				return ResultFactory.CreateErrorResult<{{name}}CommandResponse>(
+					request.Id,
+					null,
+					"Hata / İşlem Başarısız",
+					"{{table}} güncellenirken bir hata oluştu.",
+					ex.Message
+				);
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,86 @@
+
+<form [formGroup]="frm!" (ngSubmit)="onSubmit(frm?.value)">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-6">
+        <h1 mat-dialog-title> <span class="material-icons" style="color: rgb(19, 196, 202);">map</span>   Ünvan İşlemleri</h1>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-content style="padding: 5px;">
+    <hr>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label >Ünvan Adı</mat-label>
+            <input matInput #inputunvan maxlength="50"  formControlName="titleName">
+            <mat-hint align="end">{{inputunvan.value.length}}/50  karakter kaldı</mat-hint>
+            <mat-error *ngIf="frmControls?.titleName?.errors?.required">Lütfen Ünvan Adı Giriniz.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+        <mat-form-field style="width: 100%;" appearance="outline">
+          <mat-label>Durumu</mat-label>
+          <mat-select formControlName="isActive" name="statu">
+
+            @for (statu of status; track statu) {
+              <mat-option [value]="statu.id">{{statu.name}}</mat-option>
+            }
+
+          </mat-select>
+        </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <mat-form-field style="width: 100%;" appearance="outline">
+              <mat-label >Açıklama</mat-label>
+              <textarea  matInput #inputdescription maxlength="100"  formControlName="description" rows="1" value="Seyhan Devlet Hastanesi"></textarea>
+              <mat-hint align="end">{{inputdescription.value.length}}/100  karakter kaldı</mat-hint>
+              <mat-error *ngIf="frmControls?.description?.errors?.required">Lütfen Açıklama Giriniz.</mat-error>
+            </mat-form-field>
+        </div>
+              <div class="col">
+          <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>Başlangıç Tarihi</mat-label>
+            <input matInput formControlName="startDate"  [(ngModel)]="startDate" [min]="currentDate" (dateChange)="calculateDays()" [matDatepicker]="picker1">
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker  #picker1></mat-datepicker>
+            <mat-error *ngIf="frmControls?.startDate?.errors?.required">Lütfen Başlangıç Tarihi Giriniz.</mat-error>
+
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+  <hr>
+</div>
+<mat-dialog-actions   style="justify-content: end; padding-right: 25px;">
+  <div>
+
+    <div class="button-forego"  style="float: right;">
+      <span class="mas">Vazgeç</span>
+      <button type="button" mat-dialog-close  name="Hover">Vazgeç</button>
+    </div>
+    </div>
+    <div>
+    <div class="button-appApproval" style="float: right;">
+      <span class="mas">Kaydet</span>
+      <button type="button" type="submit" name="Hover">Kaydet</button>
+    </div>
+  </div>
+</mat-dialog-actions>
+</form>
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using {{application}}.Application.Abstractions.Contexts;
+using {{application}}.Application.Dtos.Response;
+using {{application}}.Application.Operations;
+
+
+namespace {{application}}.Application.Features.Queries.{{folder}}.{{name}}
+{
+	public class {{name}}QueryHandler(IEmployeeDbContext context) : IRequestHandler<{{name}}QueryRequest, TransactionResultPack<{{name}}QueryResponse>>
+	{
+
+   public async Task<TransactionResultPack<{{name}}QueryResponse>> Handle({{name}}QueryRequest request, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var totalCount = await context.{{tableDb}}
+                .Where(x => x.RowIsActive && !x.RowIsDeleted)
+                .AsNoTracking()
+                .CountAsync(cancellationToken);
+            var {{table}} = await context.{{tableDb}}
+                .Where(x => x.RowIsActive && !x.RowIsDeleted)
+                .AsNoTracking()
+                .Skip(request.Page * request.Size)
+                .Take(request.Size)
+                .ToListAsync(cancellationToken);
+
+            return ResultFactory.CreateSuccessResult<{{name}}QueryResponse>(
+                new {{name}}QueryResponse
+                {
+                    TotalCount = totalCount,
+                    {{tableDb}} = {{table}}
+                },
+                null,
+                null,
+                "İşlem Başarılı",
+                "Çalışanlar başarıyla getirildi.",
+                $"{ {{table}}.Count } çalışan başarıyla getirildi."
+            );
+        }
+        catch (Exception ex)
+        {
+            return ResultFactory.CreateErrorResult<{{name}}QueryResponse>(
+                null,
+                null,
+                "Hata / İşlem Başarısız",
+                "Çalışanlar getirilirken bir hata oluştu.",
+                ex.Message
+            );
+        }
+    }
+	}
+}

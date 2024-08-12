@@ -1,0 +1,57 @@
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using {{application}}.Application.Abstractions.Contexts;
+using {{application}}.Application.Dtos.Response;
+using {{application}}.Application.Operations;
+
+namespace {{application}}.Application.Features.Queries.{{folder}}.{{name}}
+{
+	public class {{name}}QueryHandler(IEmployeeDbContext context) : IRequestHandler<{{name}}QueryRequest, TransactionResultPack<{{name}}QueryResponse>>
+	{
+		public async Task<TransactionResultPack<{{name}}QueryResponse>> Handle({{name}}QueryRequest request, CancellationToken cancellationToken)
+		{
+			try
+			{
+				var {{table}} = await context.{{tableDb}}
+					.Where(x => x.Id == Guid.Parse(request.Id))
+					.AsNoTracking()
+					.FirstOrDefaultAsync(cancellationToken);
+
+				if ({{table}} == null)
+				{
+					return ResultFactory.CreateErrorResult<{{name}}QueryResponse>(
+						request.Id,
+						null,
+						"Hata / İşlem Başarısız",
+						"Belirtilen çalışan bulunamadı.",
+						"Employee not found."
+					);
+				}
+
+				return ResultFactory.CreateSuccessResult<{{name}}QueryResponse>(
+					new {{name}}QueryResponse
+					{
+						{{tableDb}} = {{table}}
+					},
+					null,
+					null,
+					"İşlem Başarılı",
+					"Çalışan başarıyla getirildi.",
+					$"Çalışan Id: { {{table}}.Id} başarıyla getirildi."
+				);
+			}
+			catch (Exception ex)
+			{
+				return ResultFactory.CreateErrorResult<{{name}}QueryResponse>(
+					request.Id,
+					null,
+					"Hata / İşlem Başarısız",
+					"Çalışan getirilirken bir hata oluştu.",
+					ex.Message
+				);
+			}
+		}
+	}
+
+}
+

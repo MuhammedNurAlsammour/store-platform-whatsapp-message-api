@@ -1,0 +1,123 @@
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { MaterialListModule } from '../../../../../modules/material-list.module';
+import { BaseComponent, SpinnerType } from '../../../../base/base.component';
+import { DeleteDirective } from '../../../../directives/admin/delete.directive';
+import { AlertService } from '../../../../services/common/alert.service';
+import { DialogService } from '../../../../services/common/dialog.service';
+import { SearchbarService } from '../../../../services/common/searchbar.service';
+
+import { {{componentName}}Service } from '../../../../services/models/{{name}}.service';
+import { {{componentName}}Response } from '../../../../contracts/responses/{{name}}-response';
+import { Request{{componentName}} } from '../../../../contracts/requests/request-{{name}}';
+
+@Component({
+  selector: 'app-{{nameChildirinList}}',
+  standalone: true,
+  imports: [
+    CommonModule,
+    MaterialListModule,
+    DeleteDirective,
+  ],
+  templateUrl: './{{nameChildirinList}}.component.html',
+  styleUrl: './{{nameChildirinList}}.component.scss'
+})
+export class {{childComponentName}}Component extends BaseComponent implements OnInit {
+
+  @Output() updated = new EventEmitter<void>();
+  @Input() filterValue?: string = '';
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild('inputSearch') inputElement?: HTMLInputElement;
+
+  displayedColumns: string[] = ['action']; // TODO: DEĞİŞTİR
+  dataSource = new MatTableDataSource<Result{{componentName}}>();
+
+  constructor(
+    private searchbarService: SearchbarService,
+    private dialogService: DialogService,
+    private alertService: AlertService,
+    private {{componentName}}Service: {{componentName}}Service,
+    spinner: NgxSpinnerService
+  ) {
+    super(spinner);
+  }
+
+  /** Bileşen başlatıldığında listeyi getirir. */
+  ngOnInit(): void {
+    this.getList();
+  }
+
+  /** Listeyi alır ve günceller. */
+  async getList(): Promise<void> {
+    if (this.permissionsService.ifPermit("GET.Reading.")) { // TODO: değiştir
+      this.showSpinner(SpinnerType.BallNewtonCradle);
+
+      try {
+        const response = await this.{{componentName}}Service.read(
+          this.paginator ? this.paginator.pageIndex : 0,
+          this.paginator ? this.paginator.pageSize : 15
+        );
+
+        if (response) {
+          const allProduct: {{componentName}}Response = response;
+          this.dataSource.data = allProduct.result;
+          this.paginator.length = allProduct.refId;
+          this.dataSource = new MatTableDataSource<Result{{componentName}}>(response.result);
+        } else {
+          console.error('Veri alınamadı:', response);
+        }
+      } catch (error) {
+        this.alertService.error("Veri çekilirken bir hata oluştu.");
+      } finally {
+        this.hideSpinner(SpinnerType.BallNewtonCradle);
+      }
+    }
+  }
+
+  /** Sayfa değiştiğinde listeyi günceller. */
+  async pageChanged(): Promise<void> {
+    await this.getList();
+  }
+
+  /** Seçili öğeyi güncellemek için diyalog açar. */
+  update(element: Result{{componentName}}): void {
+    // const model = new Request{{componentName}}();
+    // model.id = element.id;
+    // model.titleName = element.titleName;
+    // model.description = element.description;
+    // model.isActive = element.isActive;
+    //
+    // this.dialogService.openDialog({
+    //   componentType: {{componentName}}CreateDialogComponent,
+    //   options: { width: "730px" },
+    //   disableClose: true,
+    //   data: model,
+    //   afterClosed: () => this.getList()
+    // });
+  }
+
+  /** Giriş değişikliklerini izler ve verileri filtreler. */
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.filterValue && !changes.filterValue.firstChange) {
+      this.filterData();
+    }
+  }
+
+  /** Verileri filtreler. */
+  filterData(): void {
+    if (this.dataSource) {
+      const value = this.searchbarService.normalizeString(this.filterValue!.trim());
+      this.dataSource.filter = value;
+      this.dataSource.paginator = this.paginator;
+    }
+  }
+
+  /** Klavye olaylarına göre giriş alanını odaklar. */
+  @HostListener('document:keydown', ['$event'])
+  focusInput(event: KeyboardEvent): void {
+    this.searchbarService.focusInput(event, this.inputElement);
+  }
+}

@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using StorePlatform.Application.Features.Commands.Product.CreateProduct;
-using E = StorePlatform.Domain.Entities.Product;
-using C = StorePlatform.Domain.Entities.ProductCategory;
+using E = StorePlatform.Domain.Entities.ProductViewModel;
+using C = StorePlatform.Domain.Entities.ProductCategoryViewModel;
 using StorePlatform.Domain.Entities;
 using StorePlatform.Application.Dtos.Response;
 namespace StorePlatform.Application.Features.Commands.Product.UpdateProduct

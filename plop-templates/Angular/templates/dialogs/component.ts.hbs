@@ -1,0 +1,137 @@
+import { CommonModule } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DateAdapter } from '@angular/material/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { MaterialDialogModule } from '../../../modules/material-dialog.module';
+import { List_Id_And_Names } from '../../contracts/lists/list-id-and-names';
+import { AlertService } from '../../services/common/alert.service';
+import { BaseDialog } from '../base/basedialog.service';
+
+import { {{componentName}}Service } from './../../services/models/{{name}}.service';
+import { Request{{componentName}} } from '../../contracts/requests/request-{{name}}';
+
+@Component({
+  selector: 'app-{{name}}',
+  standalone: true,
+  imports: [
+    CommonModule,
+    MaterialDialogModule
+  ],
+  templateUrl: './{{name}}-create-dialog.component.html',
+  styleUrl: './{{name}}-create-dialog.component.scss'
+})
+export class {{componentName}}CreateDialogComponent extends BaseDialog<{{componentName}}CreateDialogComponent>  implements OnInit {
+  frm?: FormGroup;
+
+
+  constructor(
+    dialogRef: MatDialogRef<{{componentName}}CreateDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Request{{componentName}},
+    private formBuilder: FormBuilder,
+    private adapter: DateAdapter<any>,
+    private {{componentName}}Service:{{componentName}}Service,
+    private spinner: NgxSpinnerService,
+    private alertService:AlertService
+
+    ) {
+    super(dialogRef)
+  }
+  status: List_Id_And_Names[] = [
+    {id: 0, name: 'Aktif'},
+    {id: 1, name: 'Pasif'},
+
+  ];
+
+
+
+
+
+    //  Personels: Result[] = [];
+
+
+  async ngOnInit() {
+    //this.userdefinitionsservice.reademployeeselecte().then(
+    //  (response: ListpersonelcardRespon | undefined) => {
+    //    if (response && response.result) {
+    //      this.Personels = response.result
+    //    } else {
+    //    }
+    //  },
+    //  (error) => {
+    //    this.alertService.error("Bir hata oluştu.");
+    //  }
+    //);
+    this.adapter.getFirstDayOfWeek = () => 1;
+
+    this.frm = this.formBuilder.group({
+      id: [],
+      titleName: [""],
+      description: ["", [Validators.required]],
+      isActive: [0],
+      startDate: ["", [Validators.required]],
+
+    });
+    if (this.data?.id) {
+      this.frm.patchValue(this.data);
+
+    }
+  }
+
+  get frmControls() {
+    return this.frm?.controls;
+  }
+
+
+
+  async onSubmit(request{{componentName}}: Request{{componentName}}) {
+
+     if (this.frm?.invalid)
+       return;
+
+       this.spinner.show("s2");
+       if (this.data && this.data.id){
+       (await this.{{componentName}}Service.update(request{{componentName}}))
+       .subscribe(result => {
+         this.spinner.hide("s2")
+         const errorMessage: string = result?.mesajDetay;
+         this.alertService.success(errorMessage);
+         this.dialogRef.close();
+       },(errorResponse: HttpErrorResponse) => {
+         const errorMessage: string = errorResponse?.error?.mesajDetay;
+         this.alertService.error(errorMessage);
+         this.spinner.hide("s2")
+        });
+      }
+       else{
+        (await this.{{componentName}}Service.create(request{{componentName}}))
+        .subscribe(result => {
+          this.spinner.hide("s2")
+          const errorMessage: string = result?.mesajDetay;
+          this.alertService.success(errorMessage);
+          this.dialogRef.close();
+
+        },(errorResponse: HttpErrorResponse) => {
+          const errorMessage: string = errorResponse?.error?.mesajDetay;
+          this.alertService.error(errorMessage);
+          this.spinner.hide("s2")
+         });
+      }
+
+
+
+     this.spinner.hide("s2")
+   }
+   addHoursToDate(date: Date, hours: number): Date {
+     const newDate = new Date(date);
+     newDate.setHours(newDate.getHours() + hours);
+     return newDate;
+   }
+
+}
+
+export enum addState {
+  Close
+}

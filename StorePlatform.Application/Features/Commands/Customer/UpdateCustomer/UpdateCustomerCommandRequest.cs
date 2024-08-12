@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using StorePlatform.Application.Dtos.Response;
 using StorePlatform.Application.Features.Commands.Customer.DeleteCustomer;
-using E = StorePlatform.Domain.Entities.Customer;
+using E = StorePlatform.Domain.Entities.CustomerViewModel;
 
 
 namespace StorePlatform.Application.Features.Commands.Customer.UpdateCustomer

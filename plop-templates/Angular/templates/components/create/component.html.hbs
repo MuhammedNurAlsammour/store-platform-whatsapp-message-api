@@ -1,0 +1,44 @@
+<hr style="margin: 0px;">
+<mat-toolbar class="example-full-width" style="background-color: white; height: 40px;">
+  <mat-toolbar-row class="example-full-width" style="height: 40px;">
+
+
+    <div id="crumbs" style="margin-top: 16px;">
+      <ul  style="padding: 0px !important;">
+        <li><a href="/" ><i class="fa fa-home" aria-hidden="true"></i></a></li> //TODO:değiştir
+        <li><a href="/settings"><i class="fa fa-cog" aria-hidden="true"></i> Tanımlar </a></li>//TODO:değiştir
+        <li><a href="/titledefinitions" class="active">Unvan Tanımları</a></li>//TODO:değiştir
+      </ul>
+    </div>
+          <span class="example-spacer"></span>
+
+    <button mat-icon-button class="example-icon material-icons" routerLink="/settings" aria-label="Example icon-button with share icon">//TODO:değiştir
+    <mat-icon>close</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<div class="row">
+  <div class="col-md-12" style="  display: flex;">
+    <div class="col-6">
+      <div style="margin: 20px 0px 0px 17px; ">
+        <mat-form-field appearance="outline">
+          <mat-label>Arama</mat-label>
+          <input matInput #searchInput (keyup)="filterList(searchInput.value)">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="col-6" >
+      <div style="margin: 23px 20px 0px 17px; ">
+      <div class="button-container-2" >
+        <span class="mas">Yeni Kayıt</span>
+      <button type="button" (click)="create()" name="Hover">Yeni Kayıt</button>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+

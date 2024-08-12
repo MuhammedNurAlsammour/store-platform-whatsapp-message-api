@@ -3,14 +3,14 @@
 
 namespace StorePlatform.Domain.Entities
 {
-	public class ProductCategory : BaseEntity
+	public class ProductCategoryViewModel : BaseEntity
 	{
 
 		public Guid ProductId { get; set; }
 		public Guid CategoryId { get; set; }
 
 		// Navigation properties
-		public Product Product { get; set; }
-		public Category Category { get; set; }
+		public ProductViewModel Product { get; set; }
+		public CategoryViewModel Category { get; set; }
 	}
 }

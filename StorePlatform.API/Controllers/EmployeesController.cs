@@ -75,7 +75,7 @@ namespace StorePlatform.API.Controllers
 		/// <response code="400">İstek geçersizse.</response>
 		/// <response code="401">Kullanıcı yetkili değilse.</response>
 		[HttpPost("[action]")]
-		[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "CreateEmployee", Menu = "Employees")]
+		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Tüm Cartları Getir", Menu = "Kart")]
 		public async Task<ActionResult<TransactionResultPack<List<EmployeeDTO>>>> CreateEmployee([FromBody] CreateEmployeeCommandRequest request)
 		{
 			var response = await mediator.Send(request);
@@ -95,7 +95,7 @@ namespace StorePlatform.API.Controllers
 		/// <response code="401">Kullanıcı yetkili değilse.</response>
 		/// <response code="404">Güncellenecek personel bulunamazsa.</response>
 		[HttpPut("[action]")]
-		[AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "UpdateEmployee", Menu = "Employees")]
+		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Cart Bilgisi Getir", Menu = "Kart")]
 		public async Task<ActionResult<TransactionResultPack<UpdateEmployeeCommandResponse>>> UpdateEmployee([FromBody] UpdateEmployeeCommandRequest request)
 		{
 			var response = await mediator.Send(request);

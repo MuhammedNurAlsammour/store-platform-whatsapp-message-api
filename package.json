@@ -1,6 +1,19 @@
 {
     "type": "module",
     "scripts": {
-        "plop-c": "plop c"
+    "plop-c": "plop c",
+    "plop-bc": "plop component",
+    "plop-lc": "plop lc",
+    "plop-sr": "plop sr",
+    "plop-di": "plop di",
+
+    "plop-getall": "plop getall",
+    "plop-getby": "plop getby",  
+    "plop-create": "plop create",
+    "plop-delete": "plop delete",
+    "plop-update": "plop update"
+
+
+    
     }
 }

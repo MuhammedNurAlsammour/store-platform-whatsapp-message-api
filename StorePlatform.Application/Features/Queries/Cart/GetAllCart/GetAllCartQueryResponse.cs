@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using E = StorePlatform.Domain.Entities;
 
 namespace StorePlatform.Application.Features.Queries.Cart.GetAllCart
 {
-	public class GetAllCartQueryResponse
-	{
-		public int TotalCount { get; set; }
-		public object Carts { get; set; }
-	}
+    public class GetAllCartQueryResponse
+    {
+        public int TotalCount { get; set; }
+        public object Cart { get; set; }
+    }
 }

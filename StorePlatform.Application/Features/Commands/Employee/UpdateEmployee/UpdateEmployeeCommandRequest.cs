@@ -1,7 +1,7 @@
 ﻿
 using MediatR;
 using StorePlatform.Application.Dtos.Response;
-using E = StorePlatform.Domain.Entities.Employee;
+using E = StorePlatform.Domain.Entities.EmployeeViewModel;
 
 namespace StorePlatform.Application.Features.Commands.Employee.UpdateEmployee
 {

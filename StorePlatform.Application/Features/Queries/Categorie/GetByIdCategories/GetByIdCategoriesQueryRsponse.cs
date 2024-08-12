@@ -5,7 +5,7 @@ namespace StorePlatform.Application.Features.Queries.Categorie.GetByIdCategories
 {
 	public class GetByIdCategoriesQueryResponse
 	{
-		public E.Category Category { get; set; }
+		public E.CategoryViewModel Category { get; set; }
 
 	}
 }

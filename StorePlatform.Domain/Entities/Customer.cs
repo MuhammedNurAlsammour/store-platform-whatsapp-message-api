@@ -2,7 +2,7 @@
 
 namespace StorePlatform.Domain.Entities
 {
-	public class Customer: BaseEntity
+	public class CustomerViewModel : BaseEntity
 	{
 			public string? Name { get; set; }
 			public string? Email { get; set; }

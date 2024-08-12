@@ -1,6 +1,6 @@
 ﻿using MediatR;
-using E = StorePlatform.Domain.Entities.Product;
-using C = StorePlatform.Domain.Entities.ProductCategory;
+using E = StorePlatform.Domain.Entities.ProductViewModel;
+using C = StorePlatform.Domain.Entities.ProductCategoryViewModel;
 using StorePlatform.Application.Dtos.Response;
 
 

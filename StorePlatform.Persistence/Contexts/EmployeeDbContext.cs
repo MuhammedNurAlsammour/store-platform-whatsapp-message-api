@@ -9,12 +9,13 @@ namespace StorePlatform.Persistence.Contexts
 	{
 		public EmployeeDbContext(DbContextOptions<EmployeeDbContext> options) : base(options) { }
 
-		public DbSet<Employee> Employees { get; set; }
-		public DbSet<Example> Examples { get; set; }
-		public DbSet<Customer> Customers { get; set; }
-		public DbSet<Product> Products { get; set; }
-		public DbSet<Category> categories { get; set; }
-		public DbSet<ProductCategory> ProductCategories { get; set; }
+		public DbSet<EmployeeViewModel> Employees { get; set; }
+		public DbSet<ExampleViewModel> Examples { get; set; }
+		public DbSet<CustomerViewModel> Customers { get; set; }
+		public DbSet<ProductViewModel> Products { get; set; }
+		public DbSet<CategoryViewModel> categories { get; set; }
+		public DbSet<ProductCategoryViewModel> ProductCategories { get; set; }
+		public DbSet<CartViewModel> Cart { get; set; }
 
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)

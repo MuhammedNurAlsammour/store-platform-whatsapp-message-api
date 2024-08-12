@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure.UnitTest\\StorePlatform.Infrastructure.UnitTest.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure.UnitTest\\StorePlatform.Infrastructure.UnitTest.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
         "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Infrastructure.UnitTest\\obj\\",
-=======
-    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure.UnitTest\\StorePlatform.Infrastructure.UnitTest.csproj": {}
-  },
-  "projects": {
-    "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure.UnitTest\\StorePlatform.Infrastructure.UnitTest.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure.UnitTest\\StorePlatform.Infrastructure.UnitTest.csproj",
-        "projectName": "StorePlatform.Infrastructure.UnitTest",
-        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure.UnitTest\\StorePlatform.Infrastructure.UnitTest.csproj",
-        "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
-        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Infrastructure.UnitTest\\obj\\",
->>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

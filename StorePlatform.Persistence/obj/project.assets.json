@@ -2758,19 +2758,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
       "projectName": "StorePlatform.Persistence",
       "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
       "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
       "outputPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Persistence\\obj\\",
-=======
-      "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
-      "projectName": "StorePlatform.Persistence",
-      "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\StorePlatform.Persistence.csproj",
-      "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
-      "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Persistence\\obj\\",
->>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2790,13 +2782,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-<<<<<<< HEAD
             "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
               "projectPath": "A:\\PROJELER_BEN\\Projeler\\api\\idari\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
-=======
-            "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj": {
-              "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.API\\StorePlatform.API\\StorePlatform.Application\\StorePlatform.Application.csproj"
->>>>>>> d8e26844233d2ec2d35f3162da146946de29e675
             }
           }
         }

@@ -1,0 +1,46 @@
+using MediatR;
+using {{application}}.Application.Abstractions.Contexts;
+using {{application}}.Application.Dtos.Response;
+using {{application}}.Application.Operations;
+using System.Net;
+
+namespace {{application}}.Application.Features.Commands.{{folder}}.{{name}}
+{
+	public class {{name}}CommandHandler(IEmployeeDbContext context) : IRequestHandler<{{name}}CommandRequest, TransactionResultPack<{{name}}CommandResponse>>
+	{
+		public async Task<TransactionResultPack<{{name}}CommandResponse>> Handle({{name}}CommandRequest request, CancellationToken cancellationToken)
+		{
+			try
+			{
+				var {{table}} = {{name}}CommandRequest.Map(request);
+				await context.{{tableDb}}.AddAsync({{table}}, cancellationToken);
+				await context.SaveChangesAsync(cancellationToken);
+
+				return ResultFactory.CreateSuccessResult<{{name}}CommandResponse>(
+					new {{name}}CommandResponse
+					{
+						StatusCode = (int)HttpStatusCode.Created,
+						{{tableDb}}Id = {{table}}.Id
+					},
+					null,
+					null,
+					"İşlem Başarılı",
+					"{{table}} başarıyla oluşturuldu.",
+					$"{{table}} Id: { {{table}}.Id} başarıyla oluşturuldu."
+				);
+			}
+			catch (Exception ex)
+			{
+				return ResultFactory.CreateErrorResult<{{name}}CommandResponse>(
+					null,
+					null,
+					"Hata / İşlem Başarısız",
+					"{{table}} oluşturulurken bir hata oluştu.",
+					ex.Message
+				);
+			}
+		}
+	}
+
+
+}

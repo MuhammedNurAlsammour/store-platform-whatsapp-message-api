@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-using E = StorePlatform.Domain.Entities.Example;
+using E = StorePlatform.Domain.Entities.ExampleViewModel;
 
 namespace StorePlatform.Application.Features.Commands.Example.CreateExample
 {

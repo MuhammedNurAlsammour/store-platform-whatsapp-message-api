@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using StorePlatform.Application.Abstractions.Contexts;
 using StorePlatform.Application.Dtos.Response;
-using StorePlatform.Application.Features.Queries.Employee.GetAllEmployee;
 using StorePlatform.Application.Operations;
 
 namespace StorePlatform.Application.Features.Queries.Employee.GetByIdEmployee

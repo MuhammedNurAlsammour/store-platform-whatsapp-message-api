@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StorePlatform.Domain.Entities
 {
-	internal class addresses
+	internal class addressesViewModel
 	{
 	}
 }

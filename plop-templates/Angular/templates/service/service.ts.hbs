@@ -1,0 +1,72 @@
+import { Injectable } from '@angular/core';
+import { HttpClientService } from '../common/http-client.service';
+import { AlertService } from '../common/alert.service';
+import { ResponsesHr } from '../../contracts/base/responses-hr';
+import { Observable } from 'rxjs';
+import { {{serviceName}}Response } from '../../contracts/responses/{{name}}-response';
+import { Request{{serviceName}} } from '../../contracts/requests/request-{{name}}';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class {{serviceName}}Service {
+  constructor(
+    private httpClientService: HttpClientService,
+    private alertService: AlertService
+  ) { }
+
+  /**
+   * {{serviceName}} listesi
+   * Belirli bir sayfa düzeninde {{serviceName}} listesini alır.
+   * @param {number} [page=0] - Verilerin görüntüleneceği istenen sayfa. Varsayılan olarak 0.
+   * @param {number} [size=5] - Bir sayfadaki gösterilecek öğe sayısı. Varsayılan olarak 5.
+   * @returns {Promise<{{serviceName}}Response | undefined>} - Alınan {{serviceName}} listesi veya hata durumunda undefined.
+   */
+  async read(
+    page: number = 0,
+    size: number = 5
+  ): Promise<{{serviceName}}Response | undefined> {
+    try {
+      const promiseData: {{serviceName}}Response | undefined =
+        await this.httpClientService.get<{{serviceName}}Response>({
+          controller: "{{controllerName}}",
+          action: "",
+          queryString: `page=${page}&size=${size}`
+        }).toPromise();
+      return promiseData;
+    } catch (error) {
+      this.alertService.error("Veri çekilirken bir hata oluştu.");
+      throw error;
+    }
+  }
+
+  /**
+   * {{serviceName}} verilerini ekle
+   * Sağlanan verileri kullanarak belirtilen {{serviceName}} verilerini ekler.
+   * @param {Request{{serviceName}} } model - Eklenmesi gereken {{serviceName}} verileri.
+   * @returns {Promise<Observable<ResponsesHr>>} - İşlem sonucunu döndüren observable.
+   */
+  async create(model: Request{{serviceName}}): Promise<Observable<ResponsesHr>> {
+    const response: Observable<ResponsesHr> =
+      this.httpClientService.post<Request{{serviceName}}, ResponsesHr>({
+        controller: "{{controllerName}}",
+        action: ""
+      }, model);
+    return response;
+  }
+
+  /**
+   * {{serviceName}} verilerini güncelle
+   * Sağlanan verileri kullanarak belirtilen {{serviceName}} verilerini günceller.
+   * @param {Request{{serviceName}} } model - Güncellenmesi gereken {{serviceName}} verileri.
+   * @returns {Promise<Observable<ResponsesHr>>} - İşlem sonucunu döndüren observable.
+   */
+  async update(model: Request{{serviceName}}): Promise<Observable<ResponsesHr>> {
+    const response: Observable<ResponsesHr> =
+      this.httpClientService.put<Request{{serviceName}}, ResponsesHr>({
+        controller: "{{controllerName}}",
+        action: ""
+      }, model);
+    return response;
+  }
+}

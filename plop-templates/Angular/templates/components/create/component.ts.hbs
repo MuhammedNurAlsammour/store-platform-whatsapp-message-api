@@ -1,0 +1,58 @@
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { BaseComponent } from '../../../../base/base.component';
+import { AlertConfig, AlertPosition, AlertService } from '../../../../services/common/alert.service';
+import { DialogService } from '../../../../services/common/dialog.service';
+import { HttpClientService } from '../../../../services/common/http-client.service';
+import { TitleDefinitionsService } from '../../../../services/models/title-definitions.service';
+import { MaterialCreateModule } from '../../../../../modules/material-create.module';
+
+@Component({
+  selector: 'app-{{nameChildirinCreate}}',
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule,
+    MaterialCreateModule,
+  ],
+  templateUrl: './create.component.html',
+  styleUrl: './create.component.scss'
+})
+export class {{childCreateName}}Component extends BaseComponent implements OnInit {
+  @Output() created = new EventEmitter<void>();
+  @Output() searchFilter = new EventEmitter<string>();
+
+  constructor(
+    private dialogService: DialogService,
+    private titleDefinitionsService: TitleDefinitionsService,
+    private httpClientService: HttpClientService,
+    private alertService: AlertService,
+    spinner: NgxSpinnerService
+  ) {
+    super(spinner);
+    const config = new AlertConfig();
+    config.duration = 5000;
+    config.positionY = AlertPosition.Top;
+    config.positionX = AlertPosition.Right;
+    this.alertService.setConfig(config);
+  }
+
+  ngOnInit(): void {}
+
+  create(): void {
+    // if (this.permissionsService.ifPermit("POST.Writing.InsertLeaveRequestAsync")){
+    //   this.dialogService.openDialog({
+    //     componentType: TitleDefinitionsCreateDialogComponent,
+    //     options: { width: "730px" },
+    //     disableClose: true,
+    //     data: {},
+    //     afterClosed: () => this.created.emit()
+    //   });
+  }
+
+  filterList(value: string): void {
+    this.searchFilter.emit(value);
+  }
+}

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StorePlatform.Domain.Entities
 {
-	public class Example : BaseEntity
+	public class ExampleViewModel : BaseEntity
 	{
 		public string Name { get; set; }
 		public string Surname { get; set; }

@@ -29,7 +29,6 @@ namespace StorePlatform.Application.Features.Commands.Product.UpdateProduct
 					);
 				}
 
-				// تحديث معلومات المنتج
 				product.Name = request.Name;
 				product.Description = request.Description;
 				product.Price = request.Price;
@@ -43,7 +42,7 @@ namespace StorePlatform.Application.Features.Commands.Product.UpdateProduct
 				}
 				else
 				{
-					productCategory = new ProductCategory
+					productCategory = new ProductCategoryViewModel
 					{
 						ProductId = request.ProductId,
 						CategoryId = request.CategoryId

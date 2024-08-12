@@ -1,0 +1,43 @@
+@if (permissionsService.ifPermit("GET.Reading.")){ //TODO:değiştir
+
+<div class="container-scroll">
+  <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef> Adı </th>
+      <td mat-cell *matCellDef="let element"> {{ element.Name }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action" >
+    <th mat-header-cell *matHeaderCellDef>  </th>
+    <td mat-cell *matCellDef="let element" style="text-align: end;">
+      <button mat-button [matMenuTriggerFor]="menu"><span class="material-icons">more_vert</span></button>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item
+        appDelete
+        [id]="element.id"
+        (getdata)="getlist()"
+        controller="{{controllerName}}"
+        action="DeleteTitle"
+        ><span style="margin-left:20px ;">Sil</span></button>//TODO:değiştir
+        <button mat-menu-item (click)="update(element)">
+          <span class="material-icons" style="color:blue !important;">edit_note</span>
+          <span style="margin-left:20px ;">Düzenle</span>
+        </button>
+      </mat-menu>
+    </td>
+
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;" class="bg-row"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+  <mat-paginator style="background-color: #DEEDF7;"
+   (page)="pageChanged()"
+    [pageSizeOptions]="[15, 20, 25]"
+     showFirstLastButtons aria-label="Select page of periodic elements">
+  </mat-paginator>
+
+}

@@ -6,7 +6,7 @@ namespace StorePlatform.Application.Features.Queries.Customer.GetByIdCustomer
 {
 	public class GetByIdCustomerQueryResponse
 	{
-		public E.Customer Customer { get; set; }
+		public E.CustomerViewModel Customer { get; set; }
 
 	}
 }

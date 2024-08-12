@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using E = StorePlatform.Domain.Entities.Example;
+using E = StorePlatform.Domain.Entities.ExampleViewModel;
 
 namespace StorePlatform.Application.Features.Commands.Example.UpdateExample
 {

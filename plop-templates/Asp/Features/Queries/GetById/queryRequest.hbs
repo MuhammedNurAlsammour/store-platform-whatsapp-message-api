@@ -1,0 +1,10 @@
+using MediatR;
+using {{application}}.Application.Dtos.Response;
+
+namespace {{application}}.Application.Features.Queries.{{folder}}.{{name}}
+{
+	public class {{name}}QueryRequest : IRequest<TransactionResultPack<{{name}}QueryResponse>>
+	{
+		public string Id { get; set; }
+	}
+}

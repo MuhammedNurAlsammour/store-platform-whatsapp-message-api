@@ -4,6 +4,6 @@ namespace StorePlatform.Application.Features.Queries.Example.GetByIdExample
 {
 	public class GetByIdExampleQueryResponse
 	{
-		public E.Example Example { get; set; }
+		public E.ExampleViewModel Example { get; set; }
 	}
 }

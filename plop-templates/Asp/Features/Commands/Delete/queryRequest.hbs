@@ -1,0 +1,11 @@
+using MediatR;
+using {{application}}.Application.Dtos.Response;
+
+namespace {{application}}.Application.Features.Commands.{{folder}}.{{name}}
+{
+	public class {{name}}CommandRequest : IRequest<TransactionResultPack<{{name}}CommandResponse>>
+	{
+		public string Id { get; set; }
+	}
+}
+

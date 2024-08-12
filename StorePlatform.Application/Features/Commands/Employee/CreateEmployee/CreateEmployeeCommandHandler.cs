@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.EntityFrameworkCore;
 using StorePlatform.Application.Abstractions.Contexts;
 using StorePlatform.Application.Dtos.Response;
 using StorePlatform.Application.Operations;
@@ -21,7 +20,7 @@ namespace StorePlatform.Application.Features.Commands.Employee.CreateEmployee
 					new CreateEmployeeCommandResponse
 					{
 						StatusCode = (int)HttpStatusCode.Created,
-						EmployeeId = employee.Id // Assuming you want to return the created employee's ID
+						EmployeeId = employee.Id
 					},
 					null,
 					null,

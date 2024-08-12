@@ -1,0 +1,26 @@
+using MediatR;
+using {{application}}.Application.Dtos.Response;
+using E = {{application}}.Domain.Entities.EmployeeViewModel;
+
+namespace {{application}}.Application.Features.Commands.{{folder}}.{{name}}
+{
+	public class {{name}}CommandRequest : IRequest<TransactionResultPack<{{name}}CommandResponse>>
+	{
+
+		public string Name { get; set; }
+		public string Surname { get; set; }
+		public string? TcNo { get; set; }
+
+		public static E Map({{name}}CommandRequest request)
+		{
+			return new()
+			{
+				Name = request.Name,
+				Surname = request.Surname,
+				TcNo = request.TcNo,
+			};
+		}
+	}
+
+
+}

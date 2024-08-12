@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using StorePlatform.Domain.Entities;
 
-public class ProductCategoryMap : IEntityTypeConfiguration<ProductCategory>
+public class ProductCategoryMap : IEntityTypeConfiguration<ProductCategoryViewModel>
 {
-	public void Configure(EntityTypeBuilder<ProductCategory> builder)
+	public void Configure(EntityTypeBuilder<ProductCategoryViewModel> builder)
 	{
 		builder.ToTable("product_categories");
 

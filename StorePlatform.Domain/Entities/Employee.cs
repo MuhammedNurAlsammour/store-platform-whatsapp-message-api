@@ -2,7 +2,7 @@
 
 namespace StorePlatform.Domain.Entities
 {
-	public class Employee : BaseEntity
+	public class EmployeeViewModel : BaseEntity
 	{
 		public string? Name { get; set; }
 		public string? Surname { get; set; }

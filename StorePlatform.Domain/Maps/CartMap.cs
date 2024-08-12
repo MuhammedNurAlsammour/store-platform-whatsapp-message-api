@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace StorePlatform.Domain.Maps
 {
-	public class CartMap : IEntityTypeConfiguration<Cart>
+	public class CartMap : IEntityTypeConfiguration<CartViewModel>
 	{
-		public void Configure(EntityTypeBuilder<Cart> builder)
+		public void Configure(EntityTypeBuilder<CartViewModel> builder)
 		{
 			builder.ToTable("cart", "StorePlatform");
 
@@ -67,12 +67,12 @@ namespace StorePlatform.Domain.Maps
 			builder.HasCheckConstraint("cart_quantity_check", "quantity > 0");
 			builder.HasCheckConstraint("cart_price_check", "price >= 0");
 
-			builder.HasOne<Customer>()
+			builder.HasOne<CustomerViewModel>()
 				   .WithMany()
 				   .HasForeignKey(e => e.CustomerId)
 				   .HasConstraintName("fk_customer");
 
-			builder.HasOne<Product>()
+			builder.HasOne<ProductViewModel>()
 				   .WithMany()
 				   .HasForeignKey(e => e.ProductId)
 				   .HasConstraintName("fk_product");

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using StorePlatform.Application.Dtos.Response;
-using E = StorePlatform.Domain.Entities.Category;
+using E = StorePlatform.Domain.Entities.CategoryViewModel;
 
 namespace StorePlatform.Application.Features.Commands.Categorie.CreateCategorie
 {
