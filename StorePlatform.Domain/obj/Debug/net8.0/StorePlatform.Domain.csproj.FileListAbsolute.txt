@@ -37,3 +37,16 @@ A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\De
 A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\refint\StorePlatform.Domain.dll
 A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\StorePlatform.Domain.pdb
 A:\PROJELER_BEN\Projeler\api\idari\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\ref\StorePlatform.Domain.dll
+D:\d\api\StorePlatform.API\StorePlatform.Domain\bin\Debug\net8.0\StorePlatform.Domain.deps.json
+D:\d\api\StorePlatform.API\StorePlatform.Domain\bin\Debug\net8.0\StorePlatform.Domain.dll
+D:\d\api\StorePlatform.API\StorePlatform.Domain\bin\Debug\net8.0\StorePlatform.Domain.pdb
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\StorePlatform.Domain.csproj.AssemblyReference.cache
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\StorePlatform.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\StorePlatform.Domain.AssemblyInfoInputs.cache
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\StorePlatform.Domain.AssemblyInfo.cs
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\StorePlatform.Domain.csproj.CoreCompileInputs.cache
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\StorePlatform.Domain.sourcelink.json
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\StorePlatform.Domain.dll
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\refint\StorePlatform.Domain.dll
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\StorePlatform.Domain.pdb
+D:\d\api\StorePlatform.API\StorePlatform.Domain\obj\Debug\net8.0\ref\StorePlatform.Domain.dll

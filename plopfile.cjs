@@ -7,14 +7,28 @@ module.exports = function (plop) {
 
 
     //Angular
-    let nameChildirinList = 'list-repair';
+    let nameChildirinList = 'list-inventory';
     let nameChildirinCreate = 'create';
     let controllerName = 'InventoryRepairProcess';
     let destPath = 'src/app';
 
+
+
+      //Asp
+      let application = 'StorePlatform';
+      let folder = 'Cards';
+      let tableDb = 'Card';
+      let table = 'card';
+
+      //Asp Controller
+      let nameController = 'card'; //{{nameController}}Controller
+      let nameCon = 'müşteri';
+
+
+
     args.forEach(arg => {
       if (arg.startsWith('--name=')) {
-          name = arg.split('=')[1];
+        name = arg.split('=')[1];
       }
       if (arg.startsWith('--path=')) {
           destPath = arg.split('=')[1];
@@ -22,20 +36,11 @@ module.exports = function (plop) {
       if (arg.startsWith('--child-name=')) {
           nameChildirinList = arg.split('=')[1];
       }
+      if (arg.startsWith('--n-c=')) {
+        nameController = arg.split('=')[1];
+      }
     });
 
-      //Asp
-      let application = 'StorePlatform';
-      let folder = 'Cart';
-      let tableDb = 'Cart';
-      let table = 'cart';
-
-
-
-      if (!name) {
-      console.error('Dosya adı belirtilmemiş.');
-      process.exit(1);
-      }
 
       const componentName = name.split('-')
       .map(part => part.charAt(0).toUpperCase() + part.slice(1))
@@ -144,6 +149,38 @@ module.exports = function (plop) {
         ]
       });
 
+     // Generator for Api  component GetAll
+     plop.setGenerator('list', {
+      description: 'Yeni bir ASP create bileşeni oluştur',
+      prompts: [],
+      actions: [
+            //list
+            {
+              type: 'add',
+              path: path.resolve(__dirname, destPath, `${nameChildirinList}/${nameChildirinList}.component.ts`),
+              templateFile: path.resolve(__dirname, 'plop-templates/Angular/templates/components/List/component.ts.hbs'),
+              data: { name, componentName, nameChildirinList, childComponentName }
+              },
+              {
+                  type: 'add',
+                  path: path.resolve(__dirname, destPath, `${nameChildirinList}/${nameChildirinList}.component.html`),
+                  templateFile: path.resolve(__dirname, 'plop-templates/Angular/templates/components/List/component.html.hbs'),
+                  data: { name: nameChildirinList, componentName: childComponentName, nameChildirinList, controllerName }
+              },
+              {
+                  type: 'add',
+                  path: path.resolve(__dirname, destPath, `${nameChildirinList}/${nameChildirinList}.component.scss`),
+                  templateFile: path.resolve(__dirname, 'plop-templates/Angular/templates/components/List/component.scss.hbs'),
+                  data: { name: nameChildirinList, componentName: childComponentName, nameChildirinList }
+              },
+      ]
+     });
+
+
+
+
+
+
 
       // Generator for list component
       plop.setGenerator('lc', {
@@ -244,6 +281,21 @@ module.exports = function (plop) {
 
 
 
+      // Generator for Api  component controller
+      plop.setGenerator('controller', {
+      description: 'Yeni bir ASP controller bileşeni oluştur',
+      prompts: [],
+      actions: [
+          {
+              type: 'add',
+              path: path.resolve(__dirname, `StorePlatform.API/Controllers/${nameController}Controller.cs`),
+              templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/controller/controller.hbs'),
+              data: { nameCon,nameController,application }
+          },
+      ]
+      });
+
+
       // Generator for Api  component GetAll
       plop.setGenerator('getall', {
         description: 'Yeni bir ASP GetAll bileşeni oluştur',
@@ -268,7 +320,7 @@ module.exports = function (plop) {
                 data: { name,folder,application,tableDb,table }
             },
         ]
-    });
+      });
 
 
       // Generator for Api  component GetAll
@@ -295,85 +347,87 @@ module.exports = function (plop) {
                 data: { name,folder,application,tableDb,table }
             },
         ]
-    });
+      });
 
-  // Generator for Api  component GetAll
-  plop.setGenerator('create', {
-    description: 'Yeni bir ASP create bileşeni oluştur',
-    prompts: [],
-    actions: [
-        {
-            type: 'add',
-            path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryHandler.cs`),
-            templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Create/queryHandler.hbs'),
-            data: { name,folder,application,tableDb,table }
-        },
-        {
-            type: 'add',
-            path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryRequest.cs`),
-            templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Create/queryRequest.hbs'),
-            data: { name,folder,application,tableDb,table }
-        },
-        {
-            type: 'add',
-            path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryResponse.cs`),
-            templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Create/queryResponse.hbs'),
-            data: { name,folder,application,tableDb,table }
-        },
-    ]
-});
-
-  // Generator for Api  component GetAll
-  plop.setGenerator('delete', {
-    description: 'Yeni bir ASP delete bileşeni oluştur',
-    prompts: [],
-    actions: [
-        {
-            type: 'add',
-            path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryHandler.cs`),
-            templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Delete/queryHandler.hbs'),
-            data: { name,folder,application,tableDb,table }
-        },
-        {
-            type: 'add',
-            path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryRequest.cs`),
-            templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Delete/queryRequest.hbs'),
-            data: { name,folder,application,tableDb,table }
-        },
-        {
-            type: 'add',
-            path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryResponse.cs`),
-            templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Delete/queryResponse.hbs'),
-            data: { name,folder,application,tableDb,table }
-        },
-    ]
-});
+      // Generator for Api  component GetAll
+      plop.setGenerator('create', {
+      description: 'Yeni bir ASP create bileşeni oluştur',
+      prompts: [],
+      actions: [
+          {
+              type: 'add',
+              path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryHandler.cs`),
+              templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Create/queryHandler.hbs'),
+              data: { name,folder,application,tableDb,table }
+          },
+          {
+              type: 'add',
+              path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryRequest.cs`),
+              templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Create/queryRequest.hbs'),
+              data: { name,folder,application,tableDb,table }
+          },
+          {
+              type: 'add',
+              path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryResponse.cs`),
+              templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Create/queryResponse.hbs'),
+              data: { name,folder,application,tableDb,table }
+          },
+      ]
+      });
 
 
-  // Generator for Api  component GetAll
-  plop.setGenerator('update', {
-    description: 'Yeni bir ASP update bileşeni oluştur',
-    prompts: [],
-    actions: [
-        {
-            type: 'add',
-            path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryHandler.cs`),
-            templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Update/queryHandler.hbs'),
-            data: { name,folder,application,tableDb,table }
-        },
-        {
-            type: 'add',
-            path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryRequest.cs`),
-            templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Update/queryRequest.hbs'),
-            data: { name,folder,application,tableDb,table }
-        },
-        {
-            type: 'add',
-            path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryResponse.cs`),
-            templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Update/queryResponse.hbs'),
-            data: { name,folder,application,tableDb,table }
-        },
-    ]
-});
+
+      // Generator for Api  component GetAll
+      plop.setGenerator('delete', {
+        description: 'Yeni bir ASP delete bileşeni oluştur',
+        prompts: [],
+        actions: [
+            {
+                type: 'add',
+                path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryHandler.cs`),
+                templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Delete/queryHandler.hbs'),
+                data: { name,folder,application,tableDb,table }
+            },
+            {
+                type: 'add',
+                path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryRequest.cs`),
+                templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Delete/queryRequest.hbs'),
+                data: { name,folder,application,tableDb,table }
+            },
+            {
+                type: 'add',
+                path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryResponse.cs`),
+                templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Delete/queryResponse.hbs'),
+                data: { name,folder,application,tableDb,table }
+            },
+        ]
+      });
+
+
+      // Generator for Api  component GetAll
+      plop.setGenerator('update', {
+            description: 'Yeni bir ASP update bileşeni oluştur',
+            prompts: [],
+            actions: [
+                {
+                    type: 'add',
+                    path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryHandler.cs`),
+                    templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Update/queryHandler.hbs'),
+                    data: { name,folder,application,tableDb,table }
+                },
+                {
+                    type: 'add',
+                    path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryRequest.cs`),
+                    templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Update/queryRequest.hbs'),
+                    data: { name,folder,application,tableDb,table }
+                },
+                {
+                    type: 'add',
+                    path: path.resolve(__dirname, destPath, `${folder}/${name}/${name}QueryResponse.cs`),
+                    templateFile: path.resolve(__dirname, 'plop-templates/Asp/Features/Commands/Update/queryResponse.hbs'),
+                    data: { name,folder,application,tableDb,table }
+                },
+            ]
+      });
 
 };

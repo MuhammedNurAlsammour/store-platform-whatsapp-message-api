@@ -1,0 +1,121 @@
+using Karmed.External.Auth.Library.CustomAttributes;
+using Karmed.External.Auth.Library.Enums;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using {{application}}.Application.Dtos.Response;
+using {{application}}.Application.Dtos.ResponseDtos.{{nameController}};
+using {{application}}.Application.Operations;
+
+using System.Net;
+
+namespace {{application}}.API.Controllers
+{
+
+	[Route("api/[controller]")]
+	[ApiController]
+	[Authorize(AuthenticationSchemes = "Admin")]
+	public class {{nameController}}Controller(IMediator mediator) : ControllerBase
+    {
+		/// <summary>
+		/// Admin Ana Ekran {{nameCon}} Listesi Getirir.
+		/// </summary>
+		/// <remarks>
+		/// Bu uç nokta, belirtilen sayfa ve boyuta göre tüm {{nameCon}}lerin listesini getirir.
+		/// </remarks>
+		/// <param name="request">Tüm {{nameCon}}leri getirme parametrelerini içeren istek.</param>
+		/// <returns>{{nameCon}} listesini döndürür.</returns>
+		/// <response code="200">{{nameCon}} listesini döndürür.</response>
+		/// <response code="400">İstek geçersizse.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		[HttpGet("[action]")]
+		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "{{nameCon}} Listesi Getirir", Menu = "{{nameCon}}")]
+		public async Task<ActionResult<TransactionResultPack<List<{{nameController}}DTO>>>> GetAll{{nameController}}([FromQuery] GetAll{{nameController}}QueryRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.Created, response);
+		}
+
+		/// <summary>
+		/// Belirtilen ID'ye göre {{nameCon}} bilgilerini getirir.
+		/// </summary>
+		/// <remarks>
+		/// Bu uç nokta, belirli bir {{nameCon}} kimliğine göre {{nameCon}} bilgilerini getirir.
+		/// </remarks>
+		/// <param name="request">{{nameCon}} kimliğini içeren istek.</param>
+		/// <returns>{{nameCon}} bilgilerini döndürür.</returns>
+		/// <response code="200">{{nameCon}} bilgilerini döndürür.</response>
+		/// <response code="400">İstek geçersizse.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		/// <response code="404">{{nameCon}} bulunamazsa.</response>
+		[HttpGet("[action]/{Id}")]
+		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "ID ye Göre {{nameCon}} Bilgilerini Görüntüle", Menu = "{{nameCon}}")]
+		public async Task<ActionResult<TransactionResultPack<List<{{nameController}}DTO>>>> GetById{{nameController}}([FromRoute] GetById{{nameController}}QueryRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.Created, response);
+		}
+
+		/// <summary>
+		/// Yeni bir {{nameCon}} ekler.
+		/// </summary>
+		/// <remarks>
+		/// Bu uç nokta, yeni bir {{nameCon}} ekler.
+		/// </remarks>
+		/// <param name="request">Yeni {{nameCon}} bilgilerini içeren istek.</param>
+		/// <returns>İşlem sonucunu döndürür.</returns>
+		/// <response code="201">{{nameCon}} başarıyla oluşturuldu.</response>
+		/// <response code="400">İstek geçersizse.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		[HttpPost("[action]")]
+		[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "{{nameCon}} Eklemek", Menu = "{{nameCon}}")]
+		public async Task<ActionResult<TransactionResultPack<List<{{nameController}}DTO>>>> Create{{nameController}}([FromBody] Create{{nameController}}CommandRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.Created, response);
+		}
+
+
+		/// <summary>
+		/// Mevcut bir {{nameCon}} kaydını günceller.
+		/// </summary>
+		/// <remarks>
+		/// Bu uç nokta, belirtilen ID'ye sahip {{nameCon}}nin bilgilerini günceller.
+		/// </remarks>
+		/// <param name="request">Güncellenecek {{nameCon}} bilgilerini içeren istek.</param>
+		/// <returns>İşlem sonucunu döndürür.</returns>
+		/// <response code="200">{{nameCon}} başarıyla güncellendi.</response>
+		/// <response code="400">İstek geçersizse.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		/// <response code="404">Güncellenecek {{nameCon}} bulunamazsa.</response>
+		[HttpPut("[action]")]
+		[AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "{{nameCon}} Güncelemek", Menu = "{{nameCon}}")]
+		public async Task<ActionResult<TransactionResultPack<Update{{nameController}}CommandResponse>>> Update{{nameController}}([FromBody] Update{{nameController}}CommandRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.Created, response);
+		}
+
+		/// <summary>
+		/// Belirtilen ID'ye sahip {{nameCon}} kaydını siler.
+		/// </summary>
+		/// <remarks>
+		/// Bu uç nokta, belirtilen ID'ye sahip {{nameCon}} kaydını siler.
+		/// </remarks>
+		/// <param name="request">Silinecek {{nameCon}} kimliğini içeren istek.</param>
+		/// <returns>İşlem sonucunu döndürür.</returns>
+		/// <response code="200">{{nameCon}} başarıyla silindi.</response>
+		/// <response code="400">İstek geçersizse.</response>
+		/// <response code="401">Kullanıcı yetkili değilse.</response>
+		/// <response code="404">Silinecek {{nameCon}} bulunamazsa.</response>
+		[HttpDelete("[action]/{Id}")]
+		[AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "{{nameCon}} Silme", Menu = "{{nameCon}}")]
+		public async Task<ActionResult<TransactionResultPack<Delete{{nameController}}CommandResponse>>> Delete{{nameController}}([FromRoute] Delete{{nameController}}CommandRequest request)
+		{
+			var response = await mediator.Send(request);
+			return StatusCode((int)HttpStatusCode.Created, response);
+		}
+
+
+	}
+}

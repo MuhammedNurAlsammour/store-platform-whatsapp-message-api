@@ -4,18 +4,12 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StorePlatform.Application.Dtos.Response;
-using StorePlatform.Application.Dtos.ResponseDtos.Categorie;
-using StorePlatform.Application.Dtos.ResponseDtos.Employee;
 using StorePlatform.Application.Features.Commands.Cart.CreateCart;
 using StorePlatform.Application.Features.Commands.Cart.DeleteCart;
-using StorePlatform.Application.Features.Commands.Employee.CreateEmployee;
-using StorePlatform.Application.Features.Commands.Employee.DeleteEmployee;
-using StorePlatform.Application.Features.Commands.Employee.UpdateEmployee;
 using StorePlatform.Application.Features.Queries.Cart.GetAllCart;
 using StorePlatform.Application.Features.Queries.Cart.GetByIdCart;
-using StorePlatform.Application.Features.Queries.Categorie.GetAllCategories;
-using StorePlatform.Application.Features.Queries.Employee.GetByIdEmployee;
 using System.Net;
+
 
 namespace StorePlatform.API.Controllers
 {
