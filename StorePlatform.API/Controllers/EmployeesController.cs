@@ -14,6 +14,7 @@ using StorePlatform.Application.Dtos.Response;
 using StorePlatform.Application.Features.Commands.Customer.UpdateCustomer;
 using StorePlatform.Application.Dtos.ResponseDtos.Customer;
 using StorePlatform.Application.Dtos.ResponseDtos.Employee;
+using StorePlatform.Application.Features.Queries.Employee.GetEmployeeByUserId;
 
 
 namespace StorePlatform.API.Controllers
@@ -63,18 +64,38 @@ namespace StorePlatform.API.Controllers
 			return StatusCode((int)HttpStatusCode.Created, response);
 		}
 
-		/// <summary>
-		/// Yeni bir personel oluşturur.
-		/// </summary>
-		/// <remarks>
-		/// Bu uç nokta, yeni bir personel ekler.
-		/// </remarks>
-		/// <param name="request">Yeni personel bilgilerini içeren istek.</param>
-		/// <returns>İşlem sonucunu döndürür.</returns>
-		/// <response code="201">Personel başarıyla oluşturuldu.</response>
-		/// <response code="400">İstek geçersizse.</response>
-		/// <response code="401">Kullanıcı yetkili değilse.</response>
-		[HttpPost("[action]")]
+        /// <summary>
+        /// Belirtilen ID'ye sahip personeli getirir.
+        /// </summary>
+        /// <remarks>
+        /// Bu uç nokta, belirli bir personelin bilgilerini getirir.
+        /// </remarks>
+        /// <param name="request">Personel kimliğini içeren istek.</param>
+        /// <returns>Personel bilgilerini döndürür.</returns>
+        /// <response code="200">Personel bilgilerini döndürür.</response>
+        /// <response code="400">İstek geçersizse.</response>
+        /// <response code="401">Kullanıcı yetkili değilse.</response>
+        /// <response code="404">Personel bulunamazsa.</response>
+        [HttpGet("[action]/{AuthUserId}")]
+        public async Task<ActionResult<TransactionResultPack<List<EmployeeDTO>>>> GetEmployeeByUserId([FromRoute] GetEmployeeByUserIdQueryRequest request)
+        {
+            var response = await mediator.Send(request);
+            return StatusCode((int)HttpStatusCode.Created, response);
+        }
+
+
+        /// <summary>
+        /// Yeni bir personel oluşturur.
+        /// </summary>
+        /// <remarks>
+        /// Bu uç nokta, yeni bir personel ekler.
+        /// </remarks>
+        /// <param name="request">Yeni personel bilgilerini içeren istek.</param>
+        /// <returns>İşlem sonucunu döndürür.</returns>
+        /// <response code="201">Personel başarıyla oluşturuldu.</response>
+        /// <response code="400">İstek geçersizse.</response>
+        /// <response code="401">Kullanıcı yetkili değilse.</response>
+        [HttpPost("[action]")]
 		[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Tüm Cartları Getir", Menu = "Kart")]
 		public async Task<ActionResult<TransactionResultPack<List<EmployeeDTO>>>> CreateEmployee([FromBody] CreateEmployeeCommandRequest request)
 		{

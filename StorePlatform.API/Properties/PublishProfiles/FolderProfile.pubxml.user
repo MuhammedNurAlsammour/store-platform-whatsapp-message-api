@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\muham\OneDrive\Desktop\publishes\storeplatform_api</_PublishTargetUrl>
-    <History>False|2024-07-10T15:31:55.6521064Z;True|2024-06-30T19:08:06.5414999+03:00;True|2024-06-19T23:47:53.6126789+03:00;True|2024-06-15T23:51:40.8826821+03:00;True|2024-06-15T23:48:55.1232555+03:00;</History>
+    <History>False|2024-09-14T07:01:22.9255441Z;False|2024-09-14T10:01:16.2120340+03:00;False|2024-07-10T18:31:55.6521064+03:00;True|2024-06-30T19:08:06.5414999+03:00;True|2024-06-19T23:47:53.6126789+03:00;True|2024-06-15T23:51:40.8826821+03:00;True|2024-06-15T23:48:55.1232555+03:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

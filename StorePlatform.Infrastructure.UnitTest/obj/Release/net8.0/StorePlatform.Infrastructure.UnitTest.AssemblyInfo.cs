@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StorePlatform.Infrastructure.UnitTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea0455e9d5011a89e81dab9be3cd4ae4560ad064")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d11db6c5e9b91fb7b1bcc57f451e2e55a520afa7")]
 [assembly: System.Reflection.AssemblyProductAttribute("StorePlatform.Infrastructure.UnitTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StorePlatform.Infrastructure.UnitTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
