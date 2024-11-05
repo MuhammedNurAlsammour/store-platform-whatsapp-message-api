@@ -76,7 +76,7 @@ MIT License
 
 ## 📞 Contact | التواصل | İletişim
 
-For any inquiries, please reach out to [your-email@example.com]
+For any inquiries, please reach out to [muhammed2005nour@gmail.com]
 
 ---
 Made with ❤️ by Muhammed Nur Alsammour
