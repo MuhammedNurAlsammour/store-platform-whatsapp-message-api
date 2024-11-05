@@ -2,11 +2,12 @@
 
 ## 🌟 Overview | نظرة عامة | Genel Bakış
 
-🌍 **[EN]** This project is a Web API associated with an e-commerce platform, which enables sending WhatsApp messages. This API is connected to the RabbitMQ message broker, allowing Python applications to access it and send Turkish language WhatsApp messages.
-
 🌍 **[AR]** هذا المشروع هو واجهة برمجة تطبيقات (API) مرتبطة بمنصة متجر إلكتروني، والتي تتيح إرسال رسائل واتساب. تم ربط هذه API مع RabbitMQ، وهو نظام رسائل وسيط، مما يسمح لتطبيقات Python بالوصول إليها وإرسال رسائل واتساب باللغة التركية.
 
 🌍 **[TR]** Bu proje, e-ticaret platformu ile bütünleşik bir WhatsApp mesajı gönderme API'sidir. RabbitMQ mesaj kuyruklama sistemi ile entegre çalışır, böylece Python uygulamaları bu API'ye erişip Türkçe WhatsApp mesajları gönderebilir.
+
+🌍 **[EN]** This project is a Web API associated with an e-commerce platform, which enables sending WhatsApp messages. This API is connected to the RabbitMQ message broker, allowing Python applications to access it and send Turkish language WhatsApp messages.
+
 
 ## 🚀 Features | المميزات | Özellikler
 
