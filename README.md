@@ -1,3 +1,82 @@
-هذا المشروع هو واجهة برمجة تطبيقات (API) مرتبطة بمنصة متجر إلكتروني، والتي تتيح إرسال رسائل واتساب. تم ربط هذه API مع RabbitMQ، وهو نظام رسائل وسيط، مما يسمح لتطبيقات Python بالوصول إليها وإرسال رسائل واتساب باللغة التركية. هذا API هو جزء من منصة تجارة إلكترونية أوسع، ويوفر واجهة برمجية لإدارة وإرسال رسائل واتساب الخاصة بالعملاء الناطقين باللغة التركية. يتميز هذا الحل بقدرته على المعالجة الآلية للرسائل باستخدام RabbitMQ، مما يوفر مرونة وقابلية للتطوير في نظام التجارة الإلكترونية الشامل. كما يسمح بتحسين تجربة المستخدم من خلال إتاحة قنوات اتصال مخصصة للعملاء الناطقين بالتركية.
-Bu proje, e-ticaret platformu ile bütünleşik bir Whatsapp mesajı gönderme API'sidir. RabbitMQ mesaj kuyruklama sistemi ile entegre çalışır, böylece Python uygulamaları bu API'ye erişip Türkçe Whatsapp mesajları gönderebilir. Bu API, daha geniş kapsamlı bir e-ticaret platformunun bir parçasıdır ve Türkçe konuşan müşteriler için Whatsapp mesajlarını yönetmek ve göndermek için bir programlama arayüzü sağlar. RabbitMQ kullanarak mesajların otomatik işlenmesi, bu çözümün e-ticaret sistemindeki esneklik ve genişletilebilirlik sağlar. Ayrıca, Türkçe konuşan müşteriler için özelleştirilmiş iletişim kanalları sunarak kullanıcı deneyimini iyileştirir.
-This project is a Web API associated with an e-commerce platform, which enables sending WhatsApp messages. This API is connected to the RabbitMQ message broker, allowing Python applications to access it and send Turkish language WhatsApp messages. This API is part of a larger e-commerce platform and provides a programming interface to manage and send WhatsApp messages for Turkish-speaking customers. The ability to automatically process messages using RabbitMQ provides flexibility and scalability within the overall e-commerce system. Additionally, it enhances the user experience by offering customized communication channels for Turkish-speaking customers.
+# Store Platform WhatsApp Message API
+
+## 🌟 Overview | نظرة عامة | Genel Bakış
+
+🌍 **[EN]** This project is a Web API associated with an e-commerce platform, which enables sending WhatsApp messages. This API is connected to the RabbitMQ message broker, allowing Python applications to access it and send Turkish language WhatsApp messages.
+
+🌍 **[AR]** هذا المشروع هو واجهة برمجة تطبيقات (API) مرتبطة بمنصة متجر إلكتروني، والتي تتيح إرسال رسائل واتساب. تم ربط هذه API مع RabbitMQ، وهو نظام رسائل وسيط، مما يسمح لتطبيقات Python بالوصول إليها وإرسال رسائل واتساب باللغة التركية.
+
+🌍 **[TR]** Bu proje, e-ticaret platformu ile bütünleşik bir WhatsApp mesajı gönderme API'sidir. RabbitMQ mesaj kuyruklama sistemi ile entegre çalışır, böylece Python uygulamaları bu API'ye erişip Türkçe WhatsApp mesajları gönderebilir.
+
+## 🚀 Features | المميزات | Özellikler
+
+### 🔹 Integration | التكامل | Entegrasyon
+- RabbitMQ Message Broker
+- Python Applications
+- WhatsApp API
+- E-commerce Platform
+
+### 🔹 Functionality | الوظائف | İşlevsellik
+- Message Management
+- Automated Processing
+- Turkish Language Support
+- Scalable Architecture
+
+## 💻 Technical Stack | التقنيات المستخدمة | Teknik Altyapı
+
+- **.NET Core**
+- **RabbitMQ**
+- **Python**
+- **WhatsApp Business API**
+- **Docker**
+
+## 📝 Requirements | المتطلبات | Gereksinimler
+
+- .NET Core SDK
+- RabbitMQ Server
+- Python 3.x
+- Docker (optional)
+
+## 🛠️ Installation | التثبيت | Kurulum
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/store-platform-whatsapp-message-api.git
+
+# Navigate to project directory
+cd store-platform-whatsapp-message-api
+
+# Install dependencies
+dotnet restore
+```
+
+## 📦 Configuration | الإعداد | Yapılandırma
+
+1. Set up RabbitMQ connection
+2. Configure WhatsApp API credentials
+3. Update application settings
+
+## 🔧 Usage | الاستخدام | Kullanım
+
+```csharp
+// Example code for sending message
+public async Task<ActionResult<string>> Send([FromBody] SendWpMessageCommandRequest request)
+{
+    return Ok(await mediator.Send(request));
+}
+```
+
+## 📄 License | الترخيص | Lisans
+
+MIT License
+
+## 👥 Contributors | المساهمون | Katkıda Bulunanlar
+
+- Muhammed Nur Alsammour
+
+## 📞 Contact | التواصل | İletişim
+
+For any inquiries, please reach out to [your-email@example.com]
+
+---
+Made with ❤️ by Muhammed Nur Alsammour
