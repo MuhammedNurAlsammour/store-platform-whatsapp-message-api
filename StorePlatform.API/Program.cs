@@ -11,19 +11,17 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var configuration = new ConfigurationBuilder()
-	.SetBasePath(builder.Environment.ContentRootPath)
-	.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+builder.Configuration
 	.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
 	.AddEnvironmentVariables()
 	.Build();
 
 // Add services to the container.
-builder.Services.AddPersistenceServices(configuration);
+builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationServices();
 
-builder.Services.AddExternalAuthServices(configuration);
+builder.Services.AddExternalAuthServices(builder.Configuration);
 builder.Services.AddAuthorization();
 
 builder.Services.AddCors(

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StorePlatform.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d11db6c5e9b91fb7b1bcc57f451e2e55a520afa7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ae1e3443aea4a3ef3b396d70b371933c9901ab0")]
 [assembly: System.Reflection.AssemblyProductAttribute("StorePlatform.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StorePlatform.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

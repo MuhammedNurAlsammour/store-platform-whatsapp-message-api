@@ -550,3 +550,4 @@ D:\d\api\StorePlatform.API\StorePlatform.API\obj\Debug\net8.0\StorePlatform.API.
 D:\d\api\StorePlatform.API\StorePlatform.API\obj\Debug\net8.0\StorePlatform.API.pdb
 D:\d\api\StorePlatform.API\StorePlatform.API\obj\Debug\net8.0\StorePlatform.API.genruntimeconfig.cache
 D:\d\api\StorePlatform.API\StorePlatform.API\obj\Debug\net8.0\ref\StorePlatform.API.dll
+D:\d\api\StorePlatform.API\StorePlatform.API\bin\Debug\net8.0\RabbitMQ.Client.dll

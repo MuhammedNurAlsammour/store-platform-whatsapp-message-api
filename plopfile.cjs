@@ -18,10 +18,10 @@ module.exports = function (plop) {
       //By  Id
       //npm run plop-getby -- --name=GetEmployeeByUserId  --path=StorePlatform.Application/Features/Queries
       let application = 'StorePlatform';
-      let folder = 'Employee';
-      let tableDb = 'Employees';
-      let table = 'employee';
-
+      let folder = 'Send';
+      let tableDb = 'Send';
+      let table = 'SendWpMessage';
+1
       //Asp Controller
       let nameController = 'card'; //{{nameController}}Controller
       let nameCon = 'Personel';
