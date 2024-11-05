@@ -78,3 +78,23 @@ D:\d\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\refint\Sto
 D:\d\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.pdb
 D:\d\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.genruntimeconfig.cache
 D:\d\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\ref\StorePlatform.Persistence.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\bin\Debug\net8.0\StorePlatform.Persistence.deps.json
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\bin\Debug\net8.0\StorePlatform.Persistence.runtimeconfig.json
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\bin\Debug\net8.0\StorePlatform.Persistence.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\bin\Debug\net8.0\StorePlatform.Persistence.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\bin\Debug\net8.0\StorePlatform.Application.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\bin\Debug\net8.0\StorePlatform.Domain.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\bin\Debug\net8.0\StorePlatform.Application.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\bin\Debug\net8.0\StorePlatform.Domain.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.csproj.AssemblyReference.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.AssemblyInfoInputs.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.AssemblyInfo.cs
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.csproj.CoreCompileInputs.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.sourcelink.json
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePla.FA8C0E29.Up2Date
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\refint\StorePlatform.Persistence.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\StorePlatform.Persistence.genruntimeconfig.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Persistence\obj\Debug\net8.0\ref\StorePlatform.Persistence.dll

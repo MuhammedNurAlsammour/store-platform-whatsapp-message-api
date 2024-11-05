@@ -62,3 +62,19 @@ D:\d\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatf
 D:\d\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\refint\StorePlatform.Application.dll
 D:\d\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatform.Application.pdb
 D:\d\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\ref\StorePlatform.Application.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\bin\Debug\net8.0\StorePlatform.Application.deps.json
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\bin\Debug\net8.0\StorePlatform.Application.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\bin\Debug\net8.0\StorePlatform.Application.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\bin\Debug\net8.0\StorePlatform.Domain.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\bin\Debug\net8.0\StorePlatform.Domain.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatform.Application.csproj.AssemblyReference.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatform.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatform.Application.AssemblyInfoInputs.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatform.Application.AssemblyInfo.cs
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatform.Application.csproj.CoreCompileInputs.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatform.Application.sourcelink.json
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePla.4BCCCC98.Up2Date
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatform.Application.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\refint\StorePlatform.Application.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\StorePlatform.Application.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Application\obj\Debug\net8.0\ref\StorePlatform.Application.dll

@@ -3,7 +3,6 @@ using FluentValidation.AspNetCore;
 using Karmed.External.Auth.Library;
 using Karmed.External.Auth.Library.Filters;
 using StorePlatform.Application;
-using StorePlatform.Application.Validators.Example;
 using StorePlatform.Infrastructure;
 using StorePlatform.Infrastructure.Filters;
 using StorePlatform.Persistence;
@@ -32,7 +31,6 @@ builder.Services.AddCors(
 
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
-builder.Services.AddValidatorsFromAssemblyContaining<CreateExampleValidator>();
 
 builder.Services.AddControllers(options =>
 {

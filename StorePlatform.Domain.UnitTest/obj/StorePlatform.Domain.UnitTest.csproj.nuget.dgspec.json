@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\d\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\StorePlatform.Domain.UnitTest.csproj": {}
+    "D:\\Muhammed Nur\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\StorePlatform.Domain.UnitTest.csproj": {}
   },
   "projects": {
-    "D:\\d\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\StorePlatform.Domain.UnitTest.csproj": {
+    "D:\\Muhammed Nur\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\StorePlatform.Domain.UnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\d\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\StorePlatform.Domain.UnitTest.csproj",
+        "projectUniqueName": "D:\\Muhammed Nur\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\StorePlatform.Domain.UnitTest.csproj",
         "projectName": "StorePlatform.Domain.UnitTest",
-        "projectPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\StorePlatform.Domain.UnitTest.csproj",
+        "projectPath": "D:\\Muhammed Nur\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\StorePlatform.Domain.UnitTest.csproj",
         "packagesPath": "C:\\Users\\Muhammed\\.nuget\\packages\\",
-        "outputPath": "D:\\d\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\obj\\",
+        "outputPath": "D:\\Muhammed Nur\\api\\StorePlatform.API\\StorePlatform.Domain.UnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

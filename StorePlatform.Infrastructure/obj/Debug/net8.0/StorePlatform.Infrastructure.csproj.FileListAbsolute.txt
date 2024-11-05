@@ -70,3 +70,21 @@ D:\d\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePl
 D:\d\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\refint\StorePlatform.Infrastructure.dll
 D:\d\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePlatform.Infrastructure.pdb
 D:\d\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\ref\StorePlatform.Infrastructure.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\bin\Debug\net8.0\StorePlatform.Infrastructure.deps.json
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\bin\Debug\net8.0\StorePlatform.Infrastructure.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\bin\Debug\net8.0\StorePlatform.Infrastructure.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\bin\Debug\net8.0\StorePlatform.Application.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\bin\Debug\net8.0\StorePlatform.Domain.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\bin\Debug\net8.0\StorePlatform.Application.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\bin\Debug\net8.0\StorePlatform.Domain.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePlatform.Infrastructure.csproj.AssemblyReference.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePlatform.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePlatform.Infrastructure.AssemblyInfoInputs.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePlatform.Infrastructure.AssemblyInfo.cs
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePlatform.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePlatform.Infrastructure.sourcelink.json
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePla.E33204E2.Up2Date
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePlatform.Infrastructure.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\refint\StorePlatform.Infrastructure.dll
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\StorePlatform.Infrastructure.pdb
+D:\Muhammed Nur\api\StorePlatform.API\StorePlatform.Infrastructure\obj\Debug\net8.0\ref\StorePlatform.Infrastructure.dll

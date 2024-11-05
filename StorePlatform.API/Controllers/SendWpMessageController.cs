@@ -3,8 +3,6 @@ using Karmed.External.Auth.Library.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using StorePlatform.Application.Dtos.Response;
-using StorePlatform.Application.Dtos.ResponseDtos.Employee;
-using StorePlatform.Application.Features.Commands.Employee.CreateEmployee;
 using StorePlatform.Application.Features.Commands.Send.SendWpMessage;
 using System.Net;
 
@@ -16,18 +14,17 @@ namespace StorePlatform.API.Controllers
     {
         private readonly IMediator _mediator = mediator;
 
-
         /// <summary>
-        /// Yeni bir personel oluşturur.
+        /// Yeni bir Whatsapp mesajı gönderir.
         /// </summary>
         /// <remarks>
-        /// Bu uç nokta, yeni bir personel ekler.
+        /// Bu Web API uç noktası, kullanıcıdan gelen yeni bir Whatsapp mesaj isteğini işler ve mesajı Whatsapp'a gönderir.
         /// </remarks>
-        /// <param name="request">Yeni personel bilgilerini içeren istek.</param>
-        /// <returns>İşlem sonucunu döndürür.</returns>
-        /// <response code="201">Personel başarıyla oluşturuldu.</response>
-        /// <response code="400">İstek geçersizse.</response>
-        /// <response code="401">Kullanıcı yetkili değilse.</response>
+        /// <param name="request">Gönderilecek Whatsapp mesajının bilgilerini içeren istek.</param>
+        /// <returns>Mesaj gönderme işleminin sonucunu döndürür.</returns>
+        /// <response code="201">Mesaj başarıyla gönderildi.</response>
+        /// <response code="400">Mesaj gönderme isteği geçersizse.</response>
+        /// <response code="401">Kullanıcı Whatsapp mesajı göndermek için yetkili değilse.</response>
         [HttpPost("[action]")]
         public async Task<ActionResult<string>> Send([FromBody] SendWpMessageCommandRequest request)
         {
